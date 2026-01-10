@@ -387,5 +387,183 @@
         ],
         "correct_answer": "E",
         "cached_at": "2026-01-10T21:03:22.407536"
+    },
+    "parachute": {
+        "word": "parachute",
+        "text": "Borrowed from French parachute , from para- ( “ protection against ” ) (as in parasol ) and chute ( “ fall ” ) .",
+        "origin_languages": [
+            "French"
+        ],
+        "correct_answer": "D",
+        "cached_at": "2026-01-10T21:23:21.981265"
+    },
+    "skirt": {
+        "word": "skirt",
+        "text": "From Middle English skyrte , from Old Norse skyrta , from Proto-Germanic *skurtijǭ . Doublet of shirt . Cognate with Saterland Frisian Skoarte ( “ apron ” ) , Dutch schort ( “ apron ” ) , German Schürze ( “ apron ” ) , Danish skørt ( “ skirt ” ) , Swedish skört ( “ hem of a jacket ” ) , Norwegian skjørt ( “ skirt ” ) .",
+        "origin_languages": [
+            "Middle English",
+            "Old Norse",
+            "Proto-Germanic",
+            "Saterland Frisian",
+            "Dutch",
+            "German",
+            "Danish",
+            "Swedish",
+            "Norwegian"
+        ],
+        "correct_answer": "E",
+        "cached_at": "2026-01-10T22:27:30.119868"
+    },
+    "thrust": {
+        "word": "thrust",
+        "text": "From Middle English þrusten , from Old Norse þrysta , from Proto-Germanic *þrustijaną , possibly from Proto-Indo-European *trewd- .",
+        "origin_languages": [
+            "Middle English",
+            "Old Norse",
+            "Proto-Germanic",
+            "Proto-Indo-European"
+        ],
+        "correct_answer": "E",
+        "cached_at": "2026-01-10T22:27:33.623740"
+    },
+    "child": {
+        "word": "child",
+        "text": "From Middle English child , from Old English ċild , from Proto-West Germanic *kilþ , *kelþ , from Proto-Germanic *kelþaz ( “ womb ; fetus ” ) , from Proto-Indo-European *ǵelt- ( “ womb ” ) , perhaps from Proto-Indo-European *gel- ( “ to ball up, amass ” ) .\nCognate with Danish kuld ( “ brood , litter ” ) , Swedish kull ( “ brood , litter ” ) , Icelandic kelta , kjalta ( “ lap ” ) , Gothic 𐌺𐌹𐌻𐌸𐌴𐌹 ( kilþei , “ womb ” ) , Sanskrit जर्त ( jarta ) , जर्तु ( jártu , “ vulva ” ) .",
+        "origin_languages": [
+            "Middle English",
+            "Old English",
+            "Proto-West Germanic",
+            "Proto-Germanic",
+            "Proto-Indo-European",
+            "Danish",
+            "Swedish",
+            "Icelandic",
+            "Gothic",
+            "Sanskrit"
+        ],
+        "correct_answer": "C",
+        "cached_at": "2026-01-10T22:33:18.968811"
+    },
+    "aviation": {
+        "word": "aviation",
+        "text": "Borrowed from French aviation , derived from Latin avis ( “ bird ” ) . [ 1 ] By surface analysis , avi- +‎ -ation .",
+        "origin_languages": [
+            "French",
+            "Latin"
+        ],
+        "correct_answer": "D",
+        "cached_at": "2026-01-10T22:36:20.666793"
+    },
+    "ransack": {
+        "word": "ransack",
+        "text": "The verb is derived from Middle English ransaken ( “ to examine, investigate; to rob, plunder, steal; to search, seek; to treat roughly, mistreat ” ) , [ 1 ] from Old Norse rannsaka ( “ to search a house (especially for stolen goods) ” ) , from rann ( “ house ” ) (from Proto-Germanic *razną ( “ dwelling, house ” ) , from Proto-Indo-European *h₁reh₁- ( “ lonesome; quiet; to rest ” ) ) + saka , an ablaut variant of sœkja , sǿkja ( “ to look for, search, seek ” ) (from Proto-Germanic *sōkijaną ( “ to look for, seek ” ) , ultimately from Proto-Indo-European *seh₂g- ( “ to follow; to seek out, trace ” ) ). [ 2 ]\nVerb verb sense 1.2 (“to search (someone, or a place) thoroughly in order to steal something”), verb sense 1.3 (“to search for and steal (something) as plunder”), and verb sense 2.2 (“to search for and steal things”) is probably influenced by sack ( “ to pillage, to plunder ” ) . [ 2 ]\nThe noun is derived from the verb. [ 3 ]",
+        "origin_languages": [
+            "Middle English",
+            "Old Norse",
+            "Proto-Germanic",
+            "Proto-Indo-European"
+        ],
+        "correct_answer": "E",
+        "cached_at": "2026-01-10T22:50:32.522266"
+    },
+    "cholesterol": {
+        "word": "cholesterol",
+        "text": "Borrowed from French cholestérol .",
+        "origin_languages": [
+            "French"
+        ],
+        "correct_answer": "D",
+        "cached_at": "2026-01-10T23:11:25.878140"
+    },
+    "wife": {
+        "word": "wife",
+        "text": "Inherited from Middle English wyf , wif , from Old English wīf ( “ woman, wife ” ) , from Proto-West Germanic *wīb , from Proto-Germanic *wībą ( “ woman; wife ” ) .",
+        "origin_languages": [
+            "Middle English",
+            "Old English",
+            "Proto-West Germanic",
+            "Proto-Germanic"
+        ],
+        "correct_answer": "C",
+        "cached_at": "2026-01-10T23:12:05.824292"
+    },
+    "passport": {
+        "word": "passport",
+        "text": "From French passeport , from passer ( “ pass ” ) +‎ port ( “ port ” ) . Compare portpass . Equivalent to pass +‎ port .",
+        "origin_languages": [
+            "French"
+        ],
+        "correct_answer": "D",
+        "cached_at": "2026-01-10T23:13:07.678031"
+    },
+    "microscope": {
+        "word": "microscope",
+        "text": "From New Latin microscopium and Italian microscopio , from Ancient Greek μικρός ( mikrós , “ small ” ) + σκοπέω ( skopéō , “ I look at ” ) , equivalent to micro- +‎ -scope .",
+        "origin_languages": [
+            "New Latin",
+            "Italian",
+            "Ancient Greek"
+        ],
+        "correct_answer": "A",
+        "cached_at": "2026-01-10T23:19:35.536314"
+    },
+    "foot": {
+        "word": "foot",
+        "text": "From Middle English fot , fote , foot , from Old English fōt , from Proto-West Germanic *fōt , from Proto-Germanic *fōts , from Proto-Indo-European *pṓds . Doublet of pes , pie ( “ Spanish unit of length ” ) , and pous .",
+        "origin_languages": [
+            "Middle English",
+            "Old English",
+            "Proto-West Germanic",
+            "Proto-Germanic",
+            "Proto-Indo-European"
+        ],
+        "correct_answer": "C",
+        "cached_at": "2026-01-10T23:20:09.050025"
+    },
+    "cake": {
+        "word": "cake",
+        "text": "From Middle English cake , from Old Norse kaka ( “ cake ” ) (compare Norwegian kake , Icelandic/Swedish kaka , Danish kage ), from Proto-Germanic *kakǭ , of disputed origin. Likely a distant cognate with kaak . Perhaps related to cookie , kuchen , and quiche . Doublet of coca ( pastry ) .",
+        "origin_languages": [
+            "Middle English",
+            "Old Norse",
+            "Norwegian",
+            "Proto-Germanic"
+        ],
+        "correct_answer": "E",
+        "cached_at": "2026-01-10T23:22:32.016999"
+    },
+    "synonym": {
+        "word": "synonym",
+        "text": "From Middle English sinonyme , from Latin synōnymum , from Ancient Greek συνώνυμον ( sunṓnumon ) , neuter singular form of συνώνυμος ( sunṓnumos , “ synonymous ” ) , from σύν ( sún , “ with ” ) + ὄνομα ( ónoma , “ name ” ) . By surface analysis , syn- +‎ -onym .",
+        "origin_languages": [
+            "Middle English",
+            "Latin",
+            "Ancient Greek"
+        ],
+        "correct_answer": "A",
+        "cached_at": "2026-01-10T23:24:14.005410"
+    },
+    "night": {
+        "word": "night",
+        "text": "From Middle English nighte , night , nyght , niȝt , naht , from Old English niht , from Proto-West Germanic *naht ( “ night ” ) , from Proto-Germanic *nahts ( “ night ” ) , from Proto-Indo-European *nókʷts ( “ night ” ) .",
+        "origin_languages": [
+            "Middle English",
+            "Old English",
+            "Proto-West Germanic",
+            "Proto-Germanic",
+            "Proto-Indo-European"
+        ],
+        "correct_answer": "C",
+        "cached_at": "2026-01-10T23:40:11.708315"
+    },
+    "steak": {
+        "word": "steak",
+        "text": "From Middle English steike , from Old Norse steik ( “ roast; meat roasted on a stick ” ) . The verb is either from the noun or from steikja ( “ to roast ” ) .\nThe modern pronunciation shows an irregular change of Early Modern English /ɛː/ to /eɪ/ in the standard language; contrast this with the development of other words such as speak and wreak .",
+        "origin_languages": [
+            "Middle English",
+            "Old Norse"
+        ],
+        "correct_answer": "E",
+        "cached_at": "2026-01-10T23:45:18.917868"
     }
 }

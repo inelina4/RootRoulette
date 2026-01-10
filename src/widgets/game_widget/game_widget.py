@@ -14,22 +14,25 @@ logger = logging.getLogger(__name__)
 
 
 class GameWidget(QGroupBox):
-    game_finished_signal = pyqtSignal(int, int)
-    
-    def __init__(self, rounds: int = 10, parent=None):
+    game_finished_signal = pyqtSignal(int, int, list, list)
+    def __init__(self, total_rounds: int = 10, parent=None):
         super().__init__(parent)
+        self.setWindowTitle("RootRoulette")
 
         ui_path = pathlib.Path(__file__).parent / "GameWidget.ui"
         uic.loadUi(ui_path, self)
-
         logger.info("GameWidget UI loaded from %s", ui_path)
 
-        self.max_rounds = rounds
+        self.max_rounds = total_rounds
+        self.total_rounds = total_rounds
         self.current_round = 0
         self.score = 0
         self.current_word_data: WordData = None
         self.current_language_options = []
-        
+
+        self.correct_words = []
+        self.incorrect_words = []
+
         self.etymology_service = EtymologyService()
 
         self.language_buttons: list[QPushButton] = [
@@ -47,6 +50,12 @@ class GameWidget(QGroupBox):
         self.next_button.setEnabled(False)
         self.more_button.setEnabled(False)
         self.update_score_label()
+        self.update_progress_label()
+
+    def update_progress_label(self):
+        self.progress_label.setText(
+        f"{self.current_round} spins out of {self.total_rounds}"
+        )
 
     def connect_signals(self):
         for btn in self.language_buttons:
@@ -61,7 +70,8 @@ class GameWidget(QGroupBox):
             return
         
         self.current_round += 1
-        
+        self.update_progress_label()
+
         self.word_label.setText("Loading...")
         for btn in self.language_buttons:
             btn.setEnabled(False)
@@ -77,7 +87,6 @@ class GameWidget(QGroupBox):
             self.current_word_data = self.etymology_service.get_word_data_sync(random_word)
             if not self.current_word_data:
                 logger.error("Could not get word data for %s", random_word)
-                # Try again with a different word
                 if hasattr(self, '_retry_count') and self._retry_count >= 3:
                     self.handle_word_error("Failed to load word data")
                     return
@@ -136,6 +145,10 @@ class GameWidget(QGroupBox):
 
         if chosen_language == correct_language:
             self.score += 1
+            self.correct_words.append(self.current_word_data.word)
+        else:
+            self.incorrect_words.append(self.current_word_data.word)
+
         self.update_score_label()
         self.next_button.setEnabled(True)
         self.more_button.setEnabled(True)
@@ -156,5 +169,5 @@ class GameWidget(QGroupBox):
     def switch_to_end_widget(self):
         """Emit signal when all rounds are done"""
         logger.info("Game finished with score %s/%s", self.score, self.max_rounds)
-        self.game_finished_signal.emit(self.score, self.max_rounds)
+        self.game_finished_signal.emit(self.score, self.max_rounds, self.correct_words, self.incorrect_words)
 

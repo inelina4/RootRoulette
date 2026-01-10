@@ -4,6 +4,7 @@ import json
 import random
 from PyQt6 import uic
 from PyQt6.QtCore import pyqtSignal
+from PyQt6.QtGui import QFont
 from PyQt6.QtWidgets import (
     QGroupBox,
     QMessageBox,
@@ -14,18 +15,28 @@ logger = logging.getLogger(__name__)
 
 class StartWidget(QGroupBox):
     start_game_signal = pyqtSignal(int)
+    exit_game_signal = pyqtSignal()
     def __init__(self, parent=None, last_result=None):
         super().__init__(parent)
-        self.setWindowTitle("RootRoulette")
 
         ui_path = pathlib.Path(__file__).parent / "StartWidget.ui"
         uic.loadUi(ui_path, self)
+
+        self.setWindowTitle("RootRoulette")
+
 
         logger.info("Startwidget UI loaded from %s", ui_path)
         self.selected_rounds = None
         self.greeting_label = QLabel(self)
         self.greeting_label.setObjectName("greeting_label")
         self.greeting_label.setWordWrap(True)
+
+        font = QFont("Bahnschrift")
+        font.setPointSize(12)
+        font.setWeight(QFont.Weight.Medium)
+        font.setItalic(True)
+        self.greeting_label.setFont(font)
+
         self.layout().insertWidget(0, self.greeting_label)
         self.setup_ui()
         self.connect_signals()
@@ -90,6 +101,12 @@ class StartWidget(QGroupBox):
         self.howto_button.clicked.connect(self.show_instructions)
         self.choose_drop.currentIndexChanged.connect(self.on_rounds_selected)
         self.play_button.clicked.connect(self.start_game)
+        self.exit_button.clicked.connect(self.emit_exit_signal)
+
+
+    def emit_exit_signal(self):
+        """Emit signal to main window to close the app."""
+        self.exit_game_signal.emit()
 
     def show_instructions(self):
         QMessageBox.information(

@@ -17,8 +17,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("RootRoulette")
-        self.resize(700, 450)
-        self.setMinimumSize(700, 450)
+
         ui_path = pathlib.Path(__file__).parent / "Mainwindow.ui"
         uic.loadUi(ui_path, self)
 
@@ -61,7 +60,7 @@ class MainWindow(QMainWindow):
         last_result = self.get_last_result()
         self.start_widget = StartWidget(last_result=last_result)
         self.start_widget.start_game_signal.connect(self.show_game_widget)
-        
+        self.start_widget.exit_game_signal.connect(self.close)
         self.clear_stacked_widget()
         self.stacked_widget.addWidget(self.start_widget)
         self.stacked_widget.setCurrentWidget(self.start_widget)
@@ -77,12 +76,12 @@ class MainWindow(QMainWindow):
         self.stacked_widget.addWidget(self.game_widget)
         self.stacked_widget.setCurrentWidget(self.game_widget)
     
-    def show_end_widget(self, score, max_score):
+    def show_end_widget(self, score, max_score, correct_words: list, incorrect_words: list):
         """Display the end widget with final score."""
         logger.info("Showing end widget with score %s/%s", score, max_score)
         # save last result to QSettings
         self.settings.setValue("last_result", json.dumps({"score": score, "max_score": max_score}))
-        self.end_widget = EndWidget(score, max_score)
+        self.end_widget = EndWidget(score, max_score, correct_words, incorrect_words)
         self.end_widget.restart_game_signal.connect(self.show_start_widget)
         self.end_widget.exit_game_signal.connect(self.close)
         

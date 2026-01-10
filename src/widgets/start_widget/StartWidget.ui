@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>695</width>
-    <height>475</height>
+    <width>700</width>
+    <height>553</height>
    </rect>
   </property>
   <property name="palette">
@@ -98,7 +98,22 @@
   <property name="title">
    <string/>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,1,2,0">
+  <layout class="QVBoxLayout" name="verticalLayout_2" stretch="10,5,5,15,5">
+   <property name="spacing">
+    <number>10</number>
+   </property>
+   <property name="leftMargin">
+    <number>20</number>
+   </property>
+   <property name="topMargin">
+    <number>20</number>
+   </property>
+   <property name="rightMargin">
+    <number>20</number>
+   </property>
+   <property name="bottomMargin">
+    <number>20</number>
+   </property>
    <item>
     <layout class="QHBoxLayout" name="name_game">
      <item>
@@ -166,15 +181,9 @@
     </layout>
    </item>
    <item>
-    <layout class="QVBoxLayout" name="verticalLayout_4">
+    <layout class="QVBoxLayout" name="verticalLayout_5">
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_2">
-       <property name="spacing">
-        <number>4</number>
-       </property>
-       <property name="bottomMargin">
-        <number>9</number>
-       </property>
        <item>
         <widget class="QPushButton" name="howto_button">
          <property name="maximumSize">
@@ -190,6 +199,9 @@
            <bold>true</bold>
           </font>
          </property>
+         <property name="layoutDirection">
+          <enum>Qt::LayoutDirection::LeftToRight</enum>
+         </property>
          <property name="text">
           <string>╰┈➤ How to play</string>
          </property>
@@ -197,6 +209,10 @@
        </item>
       </layout>
      </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_4">
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
@@ -214,13 +230,6 @@
          </property>
          <property name="alignment">
           <set>Qt::AlignmentFlag::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="Line" name="line">
-         <property name="orientation">
-          <enum>Qt::Orientation::Vertical</enum>
          </property>
         </widget>
        </item>
@@ -253,8 +262,8 @@
         <widget class="QLabel" name="label_2">
          <property name="maximumSize">
           <size>
-           <width>130</width>
-           <height>130</height>
+           <width>120</width>
+           <height>120</height>
           </size>
          </property>
          <property name="text">
@@ -282,14 +291,14 @@
          <property name="font">
           <font>
            <family>Bahnschrift</family>
-           <pointsize>55</pointsize>
+           <pointsize>50</pointsize>
            <bold>true</bold>
            <underline>false</underline>
            <strikeout>false</strikeout>
           </font>
          </property>
          <property name="text">
-          <string>Play</string>
+          <string>PLAY</string>
          </property>
         </widget>
        </item>
@@ -297,8 +306,8 @@
         <widget class="QLabel" name="label">
          <property name="maximumSize">
           <size>
-           <width>130</width>
-           <height>135</height>
+           <width>120</width>
+           <height>120</height>
           </size>
          </property>
          <property name="text">
@@ -320,21 +329,28 @@
     </layout>
    </item>
    <item>
-    <widget class="QLabel" name="label_5">
-     <property name="font">
-      <font>
-       <family>Bahnschrift</family>
-       <pointsize>15</pointsize>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ </string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignmentFlag::AlignCenter</set>
-     </property>
-    </widget>
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <widget class="QPushButton" name="exit_button">
+       <property name="maximumSize">
+        <size>
+         <width>120</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift</family>
+         <pointsize>20</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Exit</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </item>
   </layout>
  </widget>
