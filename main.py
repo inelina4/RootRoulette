@@ -1,6 +1,7 @@
 import logging
 import pathlib
 import sys
+import signal
 from datetime import datetime
 
 # Ensure src is importable
@@ -9,7 +10,7 @@ SRC_DIR = BASE_DIR / "src"
 sys.path.append(str(SRC_DIR))
 
 from PyQt6.QtWidgets import QApplication
-from src.widgets.mainwindow import MainWindow
+from src.widgets.mainwindow_widget.mainwindow import MainWindow
 
 
 def setup_logging():
@@ -36,6 +37,7 @@ def main():
 
     app = QApplication(sys.argv)
 
+    signal.signal(signal.SIGINT, signal.SIG_DFL)
     window = MainWindow()
     window.show()
 
