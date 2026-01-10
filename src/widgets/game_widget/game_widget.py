@@ -2,6 +2,7 @@ import logging
 import pathlib
 import random
 from PyQt6 import uic
+from PyQt6.QtCore import pyqtSignal
 from PyQt6.QtWidgets import (
     QGroupBox,
     QMessageBox, QPushButton,
@@ -36,6 +37,8 @@ LANGUAGES = ["Greek", "Latin", "Old English", "French"]
 
 
 class GameWidget(QGroupBox):
+    game_finished_signal = pyqtSignal(int, int)
+    
     def __init__(self, rounds: int = 10, parent=None):
         super().__init__(parent)
 
@@ -118,13 +121,7 @@ class GameWidget(QGroupBox):
         self.score_label.setText(f"{self.score}/{self.max_rounds}")
 
     def switch_to_end_widget(self):
-        """Switch to EndWidget when all rounds are done"""
-        parent = self.parent()
-        if parent is None:
-            logger.error("GameWidget has no parent to switch views")
-            return
-
-   #     end_widget = EndWidget(score=self.score, max_score=self.max_rounds)
-   #     parent.addWidget(end_widget)
-   #     parent.setCurrentWidget(end_widget)
+        """Emit signal when all rounds are done"""
+        logger.info("Game finished with score %s/%s", self.score, self.max_rounds)
+        self.game_finished_signal.emit(self.score, self.max_rounds)
 

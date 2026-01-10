@@ -5,7 +5,7 @@ import sys
 import signal
 from datetime import datetime
 
-from PyQt6.QtCore import QSettings
+from src.widgets.theme_widget.widget_theme_dialog import apply_saved_theme
 
 from src.helpers.palette import apply_palette
 
@@ -42,17 +42,7 @@ def main():
     logger = logging.getLogger()
 
     app = QApplication(sys.argv)
-
-    palette = app.style().standardPalette()
-    settings = QSettings()
-    palette_json = settings.value("ui/palette", "")
-    if palette_json:
-        try:
-            d = json.loads(palette_json)
-            apply_palette(palette, d)
-            app.setPalette(palette)
-        except (json.JSONDecodeError, KeyError) as e:
-            logger.warning(f"Failed to load saved palette: {e}")
+    apply_saved_theme()
 
     signal.signal(signal.SIGINT, signal.SIG_DFL)
     window = MainWindow()

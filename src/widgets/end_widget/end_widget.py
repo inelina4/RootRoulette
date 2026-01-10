@@ -1,17 +1,16 @@
 import logging
 import pathlib
-import random
 from PyQt6 import uic
 from PyQt6.QtCore import pyqtSignal
 from PyQt6.QtWidgets import (
     QGroupBox,
-    QMessageBox, QPushButton,
 )
 
 logger = logging.getLogger(__name__)
 
 class EndWidget(QGroupBox):
     exit_game_signal = pyqtSignal()
+    restart_game_signal = pyqtSignal()
     def __init__(self, score: int, max_score: int, parent=None):
         super().__init__(parent)
 
@@ -34,15 +33,9 @@ class EndWidget(QGroupBox):
         self.exit_button.clicked.connect(self.emit_exit_signal)
 
     def restart_game(self):
-        """Return to StartWidget and reset the game."""
-        parent = self.parent()
-        if parent is None:
-            logger.error("EndWidget has no parent to switch views")
-            return
-
-        #start_widget = StartWidget()
-        #parent.addWidget(start_widget)
-        ##parent.setCurrentWidget(start_widget)
+        """Emit signal to restart the game."""
+        logger.info("Restarting game")
+        self.restart_game_signal.emit()
 
     def emit_exit_signal(self):
         """Emit signal to main window to close the app."""

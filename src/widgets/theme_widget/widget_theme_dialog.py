@@ -63,12 +63,14 @@ class ThemeDialogWidget(QDialog):
             settings.setValue("theme", "bubble_gum")
         self.accept()
 
+
 def apply_saved_theme():
     settings = QSettings("RootRoulette", "RootRouletteApp")
     theme_key = settings.value("theme", "system")
 
     palette_factory = THEME_FACTORIES.get(theme_key, get_system_palette)
-    QApplication.instance().setPalette(palette_factory())
+    QApplication.setPalette(palette_factory())
+
 
 def get_system_palette():
     return QApplication.style().standardPalette()
