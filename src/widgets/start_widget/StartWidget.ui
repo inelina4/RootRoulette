@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>785</width>
+    <width>695</width>
     <height>475</height>
    </rect>
   </property>
@@ -17,7 +17,7 @@
       <brush brushstyle="SolidPattern">
        <color alpha="255">
         <red>0</red>
-        <green>85</green>
+        <green>0</green>
         <blue>0</blue>
        </color>
       </brush>
@@ -26,7 +26,7 @@
       <brush brushstyle="SolidPattern">
        <color alpha="255">
         <red>0</red>
-        <green>85</green>
+        <green>0</green>
         <blue>0</blue>
        </color>
       </brush>
@@ -46,7 +46,7 @@
       <brush brushstyle="SolidPattern">
        <color alpha="255">
         <red>0</red>
-        <green>85</green>
+        <green>0</green>
         <blue>0</blue>
        </color>
       </brush>
@@ -55,7 +55,7 @@
       <brush brushstyle="SolidPattern">
        <color alpha="255">
         <red>0</red>
-        <green>85</green>
+        <green>0</green>
         <blue>0</blue>
        </color>
       </brush>
@@ -83,6 +83,12 @@
     </disabled>
    </palette>
   </property>
+  <property name="font">
+   <font>
+    <family>Bahnschrift</family>
+    <bold>true</bold>
+   </font>
+  </property>
   <property name="cursor">
    <cursorShape>PointingHandCursor</cursorShape>
   </property>
@@ -92,22 +98,22 @@
   <property name="title">
    <string/>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,2,1">
+  <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,1,2,0">
    <item>
     <layout class="QHBoxLayout" name="name_game">
      <item>
-      <widget class="QLabel" name="root_img">
+      <widget class="QLabel" name="label_3">
        <property name="maximumSize">
         <size>
-         <width>200</width>
-         <height>130</height>
+         <width>100</width>
+         <height>110</height>
         </size>
        </property>
        <property name="text">
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>root1.png</pixmap>
+        <pixmap>../../../../ROOT.png</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>
@@ -116,15 +122,22 @@
      </item>
      <item>
       <widget class="QLabel" name="game_label">
+       <property name="maximumSize">
+        <size>
+         <width>400</width>
+         <height>150</height>
+        </size>
+       </property>
        <property name="font">
         <font>
+         <family>Bahnschrift</family>
          <pointsize>30</pointsize>
          <italic>true</italic>
-         <bold>true</bold>
+         <fontweight>ExtraBold</fontweight>
         </font>
        </property>
        <property name="text">
-        <string>✧˖°.RootRoulette✧˖°.</string>
+        <string>✧˖°. RootRoulette ✧˖°.</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -132,18 +145,18 @@
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="roulette_img">
+      <widget class="QLabel" name="label_4">
        <property name="maximumSize">
         <size>
-         <width>150</width>
-         <height>150</height>
+         <width>100</width>
+         <height>100</height>
         </size>
        </property>
        <property name="text">
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>roulette1.png</pixmap>
+        <pixmap>../../../../roulette1.png</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>
@@ -166,13 +179,14 @@
         <widget class="QPushButton" name="howto_button">
          <property name="maximumSize">
           <size>
-           <width>170</width>
-           <height>50</height>
+           <width>200</width>
+           <height>100</height>
           </size>
          </property>
          <property name="font">
           <font>
-           <pointsize>13</pointsize>
+           <family>Bahnschrift</family>
+           <pointsize>17</pointsize>
            <bold>true</bold>
           </font>
          </property>
@@ -189,8 +203,10 @@
         <widget class="QLabel" name="choose_label">
          <property name="font">
           <font>
-           <pointsize>13</pointsize>
-           <bold>false</bold>
+           <family>Bahnschrift</family>
+           <pointsize>15</pointsize>
+           <italic>true</italic>
+           <bold>true</bold>
           </font>
          </property>
          <property name="text">
@@ -209,7 +225,21 @@
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="choose_drop"/>
+        <widget class="QComboBox" name="choose_drop">
+         <property name="maximumSize">
+          <size>
+           <width>150</width>
+           <height>150</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Bahnschrift</family>
+           <pointsize>14</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
@@ -236,6 +266,9 @@
          <property name="scaledContents">
           <bool>true</bool>
          </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignBottom|Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft</set>
+         </property>
         </widget>
        </item>
        <item>
@@ -248,8 +281,11 @@
          </property>
          <property name="font">
           <font>
-           <pointsize>40</pointsize>
+           <family>Bahnschrift</family>
+           <pointsize>55</pointsize>
            <bold>true</bold>
+           <underline>false</underline>
+           <strikeout>false</strikeout>
           </font>
          </property>
          <property name="text">
@@ -261,24 +297,44 @@
         <widget class="QLabel" name="label">
          <property name="maximumSize">
           <size>
-           <width>165</width>
-           <height>150</height>
+           <width>130</width>
+           <height>135</height>
           </size>
          </property>
          <property name="text">
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>../../../../root1.png</pixmap>
+          <pixmap>../../../../ROOT.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignBottom|Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft</set>
          </property>
         </widget>
        </item>
       </layout>
      </item>
     </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_5">
+     <property name="font">
+      <font>
+       <family>Bahnschrift</family>
+       <pointsize>15</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ </string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
    </item>
   </layout>
  </widget>

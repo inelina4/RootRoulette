@@ -23,8 +23,14 @@ class StartWidget(QGroupBox):
     def setup_ui(self):
         self.play_button.setEnabled(False)
         self.choose_drop.clear()
+        self.choose_drop.addItem("Choose round count")
+        placeholder_index = self.choose_drop.findText("Choose round count")
+        placeholder_item = self.choose_drop.model().item(placeholder_index)
+        placeholder_item.setEnabled(False)
+
         self.choose_drop.addItems(["10", "15", "20"])
-        self.choose_drop.setCurrentIndex(-1)
+
+        self.choose_drop.setCurrentIndex(0)
 
     def connect_signals(self):
         self.howto_button.clicked.connect(self.show_instructions)
