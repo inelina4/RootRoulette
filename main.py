@@ -1,7 +1,13 @@
+import json
 import logging
 import pathlib
 import sys
+import signal
 from datetime import datetime
+
+from PyQt6.QtCore import QSettings
+
+from src.helpers.palette import apply_palette
 
 # Ensure src is importable
 BASE_DIR = pathlib.Path(__file__).resolve().parent
@@ -9,7 +15,7 @@ SRC_DIR = BASE_DIR / "src"
 sys.path.append(str(SRC_DIR))
 
 from PyQt6.QtWidgets import QApplication
-from src.widgets.mainwindow import MainWindow
+from src.widgets.mainwindow_widget.mainwindow import MainWindow
 
 
 def setup_logging():
@@ -33,9 +39,22 @@ def setup_logging():
 
 def main():
     setup_logging()
+    logger = logging.getLogger()
 
     app = QApplication(sys.argv)
 
+    palette = app.style().standardPalette()
+    settings = QSettings()
+    palette_json = settings.value("ui/palette", "")
+    if palette_json:
+        try:
+            d = json.loads(palette_json)
+            apply_palette(palette, d)
+            app.setPalette(palette)
+        except (json.JSONDecodeError, KeyError) as e:
+            logger.warning(f"Failed to load saved palette: {e}")
+
+    signal.signal(signal.SIGINT, signal.SIG_DFL)
     window = MainWindow()
     window.show()
 
