@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>257</width>
-    <height>191</height>
+    <width>444</width>
+    <height>327</height>
    </rect>
   </property>
   <property name="font">
@@ -30,6 +30,13 @@
       </widget>
      </item>
      <item>
+      <widget class="QRadioButton" name="dark_radio">
+       <property name="text">
+        <string>Dark theme</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QRadioButton" name="light_radio">
        <property name="text">
         <string>Light theme</string>
@@ -37,23 +44,16 @@
       </widget>
      </item>
      <item>
-      <widget class="QRadioButton" name="dark_radio">
+      <widget class="QRadioButton" name="bubble_radio">
        <property name="text">
-        <string>Gray theme</string>
+        <string>Bubblegum theme</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QRadioButton" name="very_dark_radio">
+      <widget class="QRadioButton" name="forest_radio">
        <property name="text">
-        <string>Dark theme</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QRadioButton" name="military_green_radio">
-       <property name="text">
-        <string>Military theme</string>
+        <string>Forest theme</string>
        </property>
       </widget>
      </item>
@@ -62,10 +62,10 @@
    <item>
     <widget class="QDialogButtonBox" name="button_box">
      <property name="orientation">
-      <enum>Qt::Horizontal</enum>
+      <enum>Qt::Orientation::Horizontal</enum>
      </property>
      <property name="standardButtons">
-      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Save</set>
+      <set>QDialogButtonBox::StandardButton::Cancel|QDialogButtonBox::StandardButton::Save</set>
      </property>
     </widget>
    </item>
