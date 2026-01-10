@@ -11,6 +11,7 @@ logger = logging.getLogger(__name__)
 class StartWidget(QGroupBox):
     def __init__(self, parent=None):
         super().__init__(parent)
+        self.setWindowTitle("RootRoulette")
 
         ui_path = pathlib.Path(__file__).parent / "StartWidget.ui"
         uic.loadUi(ui_path, self)

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>597</width>
-    <height>419</height>
+    <width>580</width>
+    <height>413</height>
    </rect>
   </property>
   <property name="font">
@@ -120,7 +120,7 @@
        <property name="font">
         <font>
          <family>Bahnschrift</family>
-         <pointsize>35</pointsize>
+         <pointsize>50</pointsize>
          <bold>true</bold>
          <underline>true</underline>
         </font>

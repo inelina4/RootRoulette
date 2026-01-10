@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>RootRoulette</class>
+ <widget class="QMainWindow" name="RootRoulette">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>557</width>
-    <height>352</height>
+    <height>293</height>
    </rect>
   </property>
   <property name="font">
@@ -16,7 +16,7 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>RootRoulette</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="main_layout"/>

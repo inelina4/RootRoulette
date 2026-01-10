@@ -228,8 +228,8 @@
         <widget class="QComboBox" name="choose_drop">
          <property name="maximumSize">
           <size>
-           <width>150</width>
-           <height>150</height>
+           <width>120</width>
+           <height>100</height>
           </size>
          </property>
          <property name="font">
