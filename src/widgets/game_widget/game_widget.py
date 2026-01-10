@@ -2,38 +2,15 @@ import logging
 import pathlib
 import random
 from PyQt6 import uic
-from PyQt6.QtCore import pyqtSignal
+from PyQt6.QtCore import pyqtSignal, QThread, pyqtSlot
 from PyQt6.QtWidgets import (
     QGroupBox,
     QMessageBox, QPushButton,
 )
 
+from src.services.etymology_service import EtymologyService, WordData
+
 logger = logging.getLogger(__name__)
-
-WORDS = [
-    {
-        "word": "school",
-        "origin": "Greek",
-        "explanation": "From Greek 'scholē', meaning leisure or learning."
-    },
-    {
-        "word": "hospital",
-        "origin": "Latin",
-        "explanation": "From Latin 'hospitalis', meaning guest or host."
-    },
-    {
-        "word": "anger",
-        "origin": "Old English",
-        "explanation": "From Old English 'angr', meaning grief or distress."
-    },
-    {
-        "word": "judge",
-        "origin": "French",
-        "explanation": "From Old French 'juger', meaning to judge."
-    },
-]
-
-LANGUAGES = ["Greek", "Latin", "Old English", "French"]
 
 
 class GameWidget(QGroupBox):
@@ -50,7 +27,10 @@ class GameWidget(QGroupBox):
         self.max_rounds = rounds
         self.current_round = 0
         self.score = 0
-        self.current_word = None
+        self.current_word_data: WordData = None
+        self.current_language_options = []
+        
+        self.etymology_service = EtymologyService()
 
         self.language_buttons: list[QPushButton] = [
             self.lg_Button_1,
@@ -79,24 +59,73 @@ class GameWidget(QGroupBox):
         if self.current_round >= self.max_rounds:
             self.switch_to_end_widget()
             return
+        
         self.current_round += 1
-        self.current_word = random.choice(WORDS)
-        self.word_label.setText(self.current_word["word"])
+        
+        self.word_label.setText("Loading...")
+        for btn in self.language_buttons:
+            btn.setEnabled(False)
+            btn.setText("...")
+        
+        try:
+            random_word = self.etymology_service.get_random_word()
+            if not random_word:
+                logger.error("No words available from etymology service")
+                self.handle_word_error("No words available")
+                return
+                
+            self.current_word_data = self.etymology_service.get_word_data_sync(random_word)
+            if not self.current_word_data:
+                logger.error("Could not get word data for %s", random_word)
+                # Try again with a different word
+                if hasattr(self, '_retry_count') and self._retry_count >= 3:
+                    self.handle_word_error("Failed to load word data")
+                    return
+                
+                self._retry_count = getattr(self, '_retry_count', 0) + 1
+                self.current_round -= 1
+                self.start_round()
+                return
+            
+            self._retry_count = 0
+                
+            self.word_label.setText(self.current_word_data.word.title())
+            
+            self.current_language_options = self.etymology_service.get_language_options(
+                self.current_word_data.correct_language
+            )
+            
+            for btn, lang in zip(self.language_buttons, self.current_language_options):
+                btn.setText(lang)
+                btn.setEnabled(True)
+                btn.setStyleSheet("")
 
-        random.shuffle(LANGUAGES)
-        for btn, lang in zip(self.language_buttons, LANGUAGES):
-            btn.setText(lang)
-            btn.setEnabled(True)
-            btn.setStyleSheet("")
-
-        self.next_button.setEnabled(False)
-        self.more_button.setEnabled(False)
-        self.update_score_label()
+            self.next_button.setEnabled(False)
+            self.more_button.setEnabled(False)
+            self.update_score_label()
+            
+        except Exception as e:
+            logger.error("Error in start_round: %s", e)
+            self.handle_word_error(f"Error loading word: {str(e)}")
+    
+    def handle_word_error(self, error_message: str):
+        """Handle errors during word loading."""
+        self.word_label.setText("Error")
+        for btn in self.language_buttons:
+            btn.setEnabled(False)
+            btn.setText("N/A")
+        
+        QMessageBox.warning(
+            self,
+            "Word Loading Error",
+            f"{error_message}\n\nGame will end early."
+        )
+        self.switch_to_end_widget()
 
     def handle_guess(self):
         clicked_button = self.sender()
         chosen_language = clicked_button.text()
-        correct_language = self.current_word["origin"]
+        correct_language = self.current_word_data.correct_language
 
         for btn in self.language_buttons:
             btn.setEnabled(False)
@@ -112,11 +141,15 @@ class GameWidget(QGroupBox):
         self.more_button.setEnabled(True)
 
     def show_explanation(self):
-        QMessageBox.information(
-            self,
-            f"Origin of '{self.current_word['word']}'",
-            self.current_word["explanation"]
-        )
+        if self.current_word_data:
+            explanation = f"Correct Answer: {self.current_word_data.correct_language}\n\n"
+            explanation += self.current_word_data.etymology_text
+            
+            QMessageBox.information(
+                self,
+                f"Etymology of '{self.current_word_data.word.title()}'",
+                explanation
+            )
     def update_score_label(self):
         self.score_label.setText(f"{self.score}/{self.max_rounds}")
 
