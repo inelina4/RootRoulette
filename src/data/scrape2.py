@@ -17,6 +17,15 @@ HEADERS = {
     "User-Agent": "DF_LU_Bot/0.1 (https://example.com; contact@example.com)"
 }
 
+#lai JSON ...
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_DIR = os.path.join(BASE_DIR, "data")
+
+os.makedirs(DATA_DIR, exist_ok=True)
+
+POINTS_FILE = os.path.join(DATA_DIR, "points.json")
+WORDS_FILE = os.path.join(DATA_DIR, "word_dict.json")
+
 class Status(Enum):
     SUCCESS = "S"
     ERROR = "E"
@@ -133,27 +142,26 @@ def get_etymology_info(word: str) -> EtymologyResponse:
 if __name__ == "__main__":
 
     #punktu saglabāšana un ielāde
-    if os.path.exists('points.json'):
-        with open("points.json", "r", encoding="utf-8") as f:
+    if os.path.exists(POINTS_FILE):
+        with open(POINTS_FILE, "r", encoding="utf-8") as f:
             points_data = json.load(f)
     else:
         points_data = {"points": 0}
-        with open('points.json', 'w', encoding="utf-8") as f:
+        with open(POINTS_FILE, 'w', encoding="utf-8") as f:
             json.dump(points_data, f, indent=4)
 
     def save_points():
-        with open("points.json", "w", encoding="utf-8") as f:
+        with open(POINTS_FILE, "w", encoding="utf-8") as f:
             json.dump(points_data, f, indent=4)
 
     #vārdnīcas saglabāšana un ielāde
-    FILENAME = "word_dict.json"
     word_dict = {}
 
-    if not os.path.exists(FILENAME):
-        with open(FILENAME, "w", encoding="utf-8") as f:
+    if not os.path.exists(WORDS_FILE):
+        with open(WORDS_FILE, "w", encoding="utf-8") as f:
             json.dump(word_dict, f, indent=4)
 
-    with open(FILENAME, "r", encoding="utf-8") as f:
+    with open(WORDS_FILE, "r", encoding="utf-8") as f:
         word_dict = json.load(f)
 
 #spēles cikls un jautājumi
