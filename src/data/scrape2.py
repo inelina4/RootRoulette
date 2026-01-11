@@ -14,10 +14,10 @@ import os
 
 API_URL = "https://en.wiktionary.org/w/api.php"
 HEADERS = {
-    "User-Agent": "RR_LU_Bot/0.1"
+    "User-Agent": "DF_LU_Bot/0.1 (https://example.com; contact@example.com)"
 }
 
-class Status(Enum): #???
+class Status(Enum):
     SUCCESS = "S"
     ERROR = "E"
     NOT_FOUND = "N"
@@ -56,8 +56,8 @@ def get_etymology_info(word: str) -> EtymologyResponse:
         
         html = response_json["parse"]["text"]["*"]
         soup = BeautifulSoup(html, "html.parser")
-        
-        # Find English section
+
+        #Atrod angļu valodas sadaļu
         english = soup.find("h2", id="English")
         if not english:
             return EtymologyResponse(
@@ -66,6 +66,7 @@ def get_etymology_info(word: str) -> EtymologyResponse:
                 data=EtymologyData(word=word, text="", origin_languages=[])
             )
         
+        #atrod etimoloģijas apakšsadaļu
         etymology_heading = None
         for h in english.find_all_next(["h3", "h4"]):
             if h.get_text(strip=True).startswith("Etymology"):
@@ -81,6 +82,7 @@ def get_etymology_info(word: str) -> EtymologyResponse:
                 data=EtymologyData(word=word, text="", origin_languages=[])
             )
         
+        #lai iegūtu etimoloģijas tekstu un izcelsmes valodas
         heading_container = etymology_heading.parent
         etymology_paragraphs = []
         origin_languages = []
@@ -127,8 +129,10 @@ def get_etymology_info(word: str) -> EtymologyResponse:
             message=f"Unexpected error: {str(e)}",
             data=None
         )
-#JSON file to store points
+#JSON faili, lai saglabātu un ielādētu punktus un vārdnīcu
 if __name__ == "__main__":
+
+    #punktu saglabāšana un ielāde
     if os.path.exists('points.json'):
         with open("points.json", "r", encoding="utf-8") as f:
             points_data = json.load(f)
@@ -137,13 +141,11 @@ if __name__ == "__main__":
         with open('points.json', 'w', encoding="utf-8") as f:
             json.dump(points_data, f, indent=4)
 
-    with open('points.json', 'w', encoding="utf-8") as f: ##
-        json.dump(points_data, f, indent=4) ##
-
     def save_points():
         with open("points.json", "w", encoding="utf-8") as f:
             json.dump(points_data, f, indent=4)
 
+    #vārdnīcas saglabāšana un ielāde
     FILENAME = "word_dict.json"
     word_dict = {}
 
@@ -154,36 +156,7 @@ if __name__ == "__main__":
     with open(FILENAME, "r", encoding="utf-8") as f:
         word_dict = json.load(f)
 
-    new_game = input("Do you want to start a new game? Y/N   ").upper()
-    if new_game == "Y":
-        points_data["points"] = 0
-        save_points()
-    question_count = int(input("How many questions do you want to ask? The maximum is 64 questions.   "))
-    if question_count > 0 and question_count <= 64:
-        for i in range(int(question_count)):
-            if __name__ == "__main__":
-                word = random.choice(list(word_dict.keys()))
-                correct_answer = word_dict[word]
-                answer = input(f"\nQuestion {i+1}\nGuess the etymology of this word:  {word}\nOptions: \n   A) Greek\n   B) Latin\n   C) Old English\n   D) French\n   E) Norse \nYour answer:   ").upper()
-                result = get_etymology_info(word)
-                if answer == correct_answer:
-                    print("Correct!\n")
-                    points_data["points"] += 1
-                    save_points()
-                    print(f"Your total points: {points_data['points']}\n")
-                else:
-                    print(f"Wrong! The correct answer is {correct_answer}.\n")
-                    print(f"Your total points: {points_data['points']}\n")
-                if result.data:
-                    print(f"Etymology of '{word}':\n{result.data.text}\n")
-    elif question_count == 0:
-        print("No questions asked.")
-    elif question_count == 65:
-        print("You can ask a maximum of 64 questions.")
-    else:
-        print("Invalid number of questions.")
-
-#Main game loop
+#spēles cikls un jautājumi
 new_game = input("Do you want to start a new game? Y/N   ").upper()
 if new_game == "Y":
     points_data["points"] = 0
@@ -191,21 +164,20 @@ if new_game == "Y":
 question_count = int(input("How many questions do you want to ask? The maximum is 64 questions.   "))
 if question_count > 0 and question_count <= 64:
     for i in range(int(question_count)):
-        if __name__ == "__main__":
-            word = random.choice(list(word_dict.keys()))
-            correct_answer = word_dict[word]
-            answer = input(f"\nQuestion {i+1}\nGuess the etymology of this word:  {word}\nOptions: \n   A) Greek\n   B) Latin\n   C) Old English\n   D) French\n   E) Norse \nYour answer:   ").upper()
-            result = get_etymology_info(word)
-            if answer == correct_answer:
-                print("Correct!\n")
-                points_data["points"] += 1
-                save_points()
-                print(f"Your total points: {points_data['points']}\n")
-            else:
-                print(f"Wrong! The correct answer is {correct_answer}.\n")
-                print(f"Your total points: {points_data['points']}\n")
-            if result.data:
-                print(f"Etymology of '{word}':\n{result.data.text}\nOrigin languages: {', '.join(result.data.origin_languages)}\n")
+        word = random.choice(list(word_dict.keys()))
+        correct_answer = word_dict[word]
+        answer = input(f"\nQuestion {i+1}\nGuess the etymology of this word:  {word}\nOptions: \n   A) Greek\n   B) Latin\n   C) Old English\n   D) French\n   E) Norse \nYour answer:   ").upper()
+        result = get_etymology_info(word)
+        if answer == correct_answer:
+            print(f"Correct! The answer is {correct_answer}.\n")
+            print(f"Etymology of '{word}':\n{result.data.text}\nOrigin languages: {', '.join(result.data.origin_languages)}\n")
+            points_data["points"] += 1
+            save_points()
+            print(f"Your total points: {points_data['points']}\n")
+        else:
+            print(f"Wrong! The correct answer is {correct_answer}.\n")
+            print(f"Etymology of '{word}':\n{result.data.text}\nOrigin languages: {', '.join(result.data.origin_languages)}\n")
+            print(f"Your total points: {points_data['points']}\n")
 elif question_count == 0:
     print("No questions asked.")
 elif question_count == 65:
