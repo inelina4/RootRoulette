@@ -1,9 +1,14 @@
+#lai scrapotu etimoloģijas datus no Wiktionary vieglākai piekļuvei un izmantošanai spēlē
 import requests
 from bs4 import BeautifulSoup, Tag
 from dataclasses import dataclass
 from typing import List, Optional
 from enum import Enum
+
+#lai randomizētu jautājumus spēlē
 import random
+
+#lai saglabātu un ielādētu punktus un vārdnīcu
 import json
 import os
 
@@ -12,7 +17,7 @@ HEADERS = {
     "User-Agent": "DF_LU_Bot/0.1 (https://example.com; contact@example.com)"
 }
 
-class Status(Enum):
+class Status(Enum): #???
     SUCCESS = "S"
     ERROR = "E"
     NOT_FOUND = "N"
@@ -174,7 +179,7 @@ if question_count > 0 and question_count <= 64:
                 print(f"Wrong! The correct answer is {correct_answer}.\n")
                 print(f"Your total points: {points_data['points']}\n")
             if result.data:
-                print(f"Etymology of '{word}':\n{result.data.text}\n")
+                print(f"Etymology of '{word}':\n{result.data.text}\nOrigin languages: {', '.join(result.data.origin_languages)}\n")
 elif question_count == 0:
     print("No questions asked.")
 elif question_count == 65:
