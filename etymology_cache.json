@@ -1,0 +1,578 @@
+{
+    "zoology": {
+        "word": "zoology",
+        "text": "From Ancient Greek ζῷον ( zōîon , “ animal ” ) + λόγος ( lógos , “ knowledge ” ) . By surface analysis , zoo- +‎ -logy . Piecewise doublet of biology .",
+        "origin_languages": [
+            "Ancient Greek"
+        ],
+        "correct_answer": "A",
+        "cached_at": "2026-01-10T20:43:48.106702"
+    },
+    "corpus": {
+        "word": "corpus",
+        "text": "Borrowed from Latin corpus ( “ body ” ) . Doublet of corpse , corps , and riff .",
+        "origin_languages": [
+            "Latin"
+        ],
+        "correct_answer": "B",
+        "cached_at": "2026-01-10T20:43:53.268467"
+    },
+    "uniform": {
+        "word": "uniform",
+        "text": "Borrowed from Middle French uniforme , from Latin uniformis .",
+        "origin_languages": [
+            "Middle French",
+            "Latin"
+        ],
+        "correct_answer": "B",
+        "cached_at": "2026-01-10T20:44:01.937490"
+    },
+    "kilogram": {
+        "word": "kilogram",
+        "text": "Borrowed from French kilogramme . By surface analysis , kilo- +‎ gram .",
+        "origin_languages": [
+            "French"
+        ],
+        "correct_answer": "D",
+        "cached_at": "2026-01-10T20:44:07.758850"
+    },
+    "myth": {
+        "word": "myth",
+        "text": "From Ancient Greek μῦθος ( mûthos , “ word, humour, companion, speech, account, rumour, fable ” ) . Attested in English since 1830. Doublet of mythos .",
+        "origin_languages": [
+            "Ancient Greek"
+        ],
+        "correct_answer": "A",
+        "cached_at": "2026-01-10T20:44:10.598160"
+    },
+    "earth": {
+        "word": "earth",
+        "text": "From Middle English erthe , from Old English eorþe , from Proto-West Germanic *erþu , from Proto-Germanic *erþō ( “ dirt, ground, earth ” ) , from Proto-Indo-European *h₁érteh₂ ( “ earth ” ) .",
+        "origin_languages": [
+            "Middle English",
+            "Old English",
+            "Proto-West Germanic",
+            "Proto-Germanic",
+            "Proto-Indo-European"
+        ],
+        "correct_answer": "C",
+        "cached_at": "2026-01-10T20:44:13.016979"
+    },
+    "scene": {
+        "word": "scene",
+        "text": "From Late Middle English scene , from Middle French scene , borrowed from Latin sc(a)ena , from Ancient Greek σκηνή ( skēnḗ , “ scene, stage ” ) . Doublet of scena and skene .",
+        "origin_languages": [
+            "Middle English",
+            "Middle French",
+            "Latin",
+            "Ancient Greek"
+        ],
+        "correct_answer": "A",
+        "cached_at": "2026-01-10T20:44:16.067150"
+    },
+    "pronoun": {
+        "word": "pronoun",
+        "text": "From pro- +‎ noun , modeled on Middle French pronom , from Latin pronomen , itself a calque of Ancient Greek ᾰ̓ντωνῠμῐ́ᾱ ( ăntōnŭmĭ́ā ) .",
+        "origin_languages": [
+            "Middle French",
+            "Latin",
+            "Ancient Greek"
+        ],
+        "correct_answer": "B",
+        "cached_at": "2026-01-10T20:44:18.467260"
+    },
+    "agriculture": {
+        "word": "agriculture",
+        "text": "From Middle English agriculture , partly from Middle French agriculture and partly from its etymon Latin agricultūra , [ 1 ] from ager ( “ field ” ) + cultūra ( “ cultivation ” ) . See acre and culture .",
+        "origin_languages": [
+            "Middle English",
+            "Middle French",
+            "Latin"
+        ],
+        "correct_answer": "B",
+        "cached_at": "2026-01-10T20:44:20.674154"
+    },
+    "freckle": {
+        "word": "freckle",
+        "text": "From Middle English freken , frekel , from Old Norse freknur pl (compare Faroese frøknur , Swedish fräknar , Danish fregner ), s -less variant of Old English sprecel from Proto-Germanic *sprekalą ( “ freckle ” ) (compare dialectal Norwegian sprekla , Middle High German spreckel ), from Proto-Indo-European *sp(h)er(e)g- ( “ to strew, sprinkle ” ) . Cognate with Albanian fruth ( “ measles ” ) . More at spark . Related to spry , sprack .",
+        "origin_languages": [
+            "Middle English",
+            "Old Norse",
+            "Faroese",
+            "Swedish",
+            "Danish",
+            "Old English",
+            "Proto-Germanic",
+            "Proto-Indo-European",
+            "Albanian"
+        ],
+        "correct_answer": "E",
+        "cached_at": "2026-01-10T20:44:22.667020"
+    },
+    "globe": {
+        "word": "globe",
+        "text": "From late Middle English globe , from Middle French globe , from Old French globe , borrowed from Latin globus . Doublet of globus .",
+        "origin_languages": [
+            "Middle English",
+            "Middle French",
+            "Old French",
+            "Latin"
+        ],
+        "correct_answer": "B",
+        "cached_at": "2026-01-10T20:44:28.341752"
+    },
+    "metaphor": {
+        "word": "metaphor",
+        "text": "From Middle French métaphore , from Latin metaphora , from Ancient Greek μεταφορά ( metaphorá ) , from μεταφέρω ( metaphérō , “ I transfer, apply ” ) , from μετά ( metá , “ with, across, after ” ) + φέρω ( phérō , “ I bear, carry ” ) .",
+        "origin_languages": [
+            "Middle French",
+            "Latin",
+            "Ancient Greek"
+        ],
+        "correct_answer": "A",
+        "cached_at": "2026-01-10T20:46:16.932296"
+    },
+    "analysis": {
+        "word": "analysis",
+        "text": "From Medieval Latin analysis , from Ancient Greek ἀνάλυσις ( análusis ) , from ἀναλύω ( analúō , “ I unravel, investigate ” ) , from ἀνα- ( ana- , “ thoroughly ” ) + λύω ( lúō , “ I loosen ” ) .",
+        "origin_languages": [
+            "Medieval Latin",
+            "Ancient Greek"
+        ],
+        "correct_answer": "A",
+        "cached_at": "2026-01-10T20:46:21.361937"
+    },
+    "bouquet": {
+        "word": "bouquet",
+        "text": "Unadapted borrowing from French bouquet , from Old French bochet , from bois , from Early Medieval Latin boscus ( “ grove ” ) , borrowed from Frankish *busk , from Proto-Germanic *buskaz . Doublet of bosket .",
+        "origin_languages": [],
+        "correct_answer": "D",
+        "cached_at": "2026-01-10T20:46:25.253040"
+    },
+    "zeugma": {
+        "word": "zeugma",
+        "text": "Borrowed from Ancient Greek ζεῦγμα ( zeûgma , “ yoking; a bond, a band ” ) , from ζεύγνυμι ( zeúgnumi , “ to yoke; to join ” ) , from ζεῦγος ( zeûgos , “ a yoke ” ) .",
+        "origin_languages": [
+            "Ancient Greek"
+        ],
+        "correct_answer": "A",
+        "cached_at": "2026-01-10T20:46:27.630369"
+    },
+    "galaxy": {
+        "word": "galaxy",
+        "text": "From Middle English galaxye , galaxie , from Old French galaxie , from Latin galaxias , from Ancient Greek γαλαξίας ( galaxías , “ Milky Way ” ) , shortening of γαλαξίας κύκλος ( galaxías kúklos , “ milky circle ” ) , from γάλα ( gála , “ milk ” ) .",
+        "origin_languages": [
+            "Middle English",
+            "Old French",
+            "Latin",
+            "Ancient Greek"
+        ],
+        "correct_answer": "A",
+        "cached_at": "2026-01-10T20:46:31.912077"
+    },
+    "immortality": {
+        "word": "immortality",
+        "text": "From Middle English immortalitee , immortalite , from Old French immortalité , from Latin immortālitās . Morphologically immortal +‎ -ity .",
+        "origin_languages": [
+            "Middle English",
+            "Old French",
+            "Latin"
+        ],
+        "correct_answer": "B",
+        "cached_at": "2026-01-10T20:46:40.160318"
+    },
+    "telegraph": {
+        "word": "telegraph",
+        "text": "Borrowed from French télégraphe , equivalent to tele- ( “ far , distant ” ) +‎ graph ( “ writing ” ) , suggested as a new name for Claude Chappe 's overland semaphore network by André François Miot de Mélito in place of Chappe's original tachygraphe ( “ tachygraph , fast writer ” ) .",
+        "origin_languages": [
+            "French"
+        ],
+        "correct_answer": "D",
+        "cached_at": "2026-01-10T20:46:43.162828"
+    },
+    "encyclopedia": {
+        "word": "encyclopedia",
+        "text": "Borrowed from New Latin encyclopēdīa, encyclopaedīa ( “ general education ” ) , a univerbated form of Koine Greek ἐγκύκλιος παιδείᾱ ( enkúklios paideíā , “ education in the circle of arts and sciences ” ) , from Ancient Greek ἐγκύκλιος ( enkúklios , “ circular ” ) + παιδείᾱ ( paideíā , “ childrearing ; education ” ) ( q.v. ). Nearly all modern English usage of the word was influenced by the scope and format of the French Encyclopédie by Diderot et al. (see quotation).",
+        "origin_languages": [
+            "New Latin",
+            "Koine Greek",
+            "Ancient Greek",
+            "French"
+        ],
+        "correct_answer": "A",
+        "cached_at": "2026-01-10T20:46:46.561129"
+    },
+    "limousine": {
+        "word": "limousine",
+        "text": "Borrowed from French limousine , from region Limousin , originally an adjective referring to the city Limoges , from Latin Lemovices (adjective Lemovicīnus ), name of a Gaulish tribe in central France, most likely a reference to their elm bows and spears, of same ultimate origin as elm .",
+        "origin_languages": [
+            "French",
+            "Latin",
+            "Gaulish"
+        ],
+        "correct_answer": "D",
+        "cached_at": "2026-01-10T20:46:57.601824"
+    },
+    "dirt": {
+        "word": "dirt",
+        "text": "From Middle English drit ( “ excrement ” ) , from Old Norse drit ( “ excrement ” ) , from Proto-Germanic *dritą , *dritō ( “ excrement ” ) , from Proto-Indo-European *dʰreyd- , *treydʰ- ( “ to have diarrhea ” ) . Cognate with Norwegian dritt ( “ excrement ” ) , dialectal Swedish dret ( “ shit ” ) , Icelandic drit ( “ bird excrement ” ) , Dutch drijten ( “ to defecate ” ) , drits ( “ dirt, mud, filth ” ) and drijt , dreet ( “ excrement ” ) , Low German drieten ( “ to defecate ” ) , Driet ( “ shit ” ) , regional German Driss ( “ shit ” ) , Old English ġedrītan ( “ to defecate ” ) . ( Can this ( + ) etymology be sourced ?)",
+        "origin_languages": [
+            "Middle English",
+            "Old Norse",
+            "Proto-Germanic",
+            "Proto-Indo-European",
+            "Norwegian",
+            "Swedish",
+            "Icelandic",
+            "Dutch",
+            "Low German",
+            "German",
+            "Old English"
+        ],
+        "correct_answer": "E",
+        "cached_at": "2026-01-10T20:47:02.487511"
+    },
+    "song": {
+        "word": "song",
+        "text": "From Middle English song , sang , from Old English sang , from Proto-West Germanic *sangu , from Proto-Germanic *sangwaz ( “ singing, song ” ) , from Proto-Indo-European *sengʷʰ- ( “ to sing ” ) . Cognate with Scots sang , song ( “ singing, song ” ) , Saterland Frisian Song ( “ song ” ) , West Frisian sang ( “ song ” ) , Dutch zang ( “ song ” ) , Low German sang ( “ song ” ) , German Sang ( “ singing, song ” ) , Swedish sång ( “ song ” ) , Norwegian Bokmål sang ( “ song ” ) , Norwegian Nynorsk song ( “ song ” ) , Icelandic söngur ( “ song ” ) , Ancient Greek ὀμφή ( omphḗ , “ voice, oracle ” ) . More at sing .",
+        "origin_languages": [
+            "Middle English",
+            "Old English",
+            "Proto-West Germanic",
+            "Proto-Germanic",
+            "Proto-Indo-European",
+            "Scots",
+            "Saterland Frisian",
+            "West Frisian",
+            "Dutch",
+            "Low German",
+            "German",
+            "Swedish",
+            "Norwegian Bokmål",
+            "Norwegian Nynorsk",
+            "Icelandic",
+            "Ancient Greek"
+        ],
+        "correct_answer": "C",
+        "cached_at": "2026-01-10T20:50:34.629135"
+    },
+    "door": {
+        "word": "door",
+        "text": "From Middle English dore , dor , from Old English duru ( “ door ” ) , dor ( “ gate ” ) , from Proto-West Germanic *dur , from Proto-Germanic *durz , from Proto-Indo-European *dʰwṓr , from *dʰwer- ( “ doorway, door, gate ” ) .",
+        "origin_languages": [
+            "Middle English",
+            "Old English",
+            "Proto-West Germanic",
+            "Proto-Germanic",
+            "Proto-Indo-European"
+        ],
+        "correct_answer": "C",
+        "cached_at": "2026-01-10T20:50:51.543630"
+    },
+    "infinity": {
+        "word": "infinity",
+        "text": "From Middle English infinite , from Old French infinité , from Latin īnfīnitās ( “ unlimitedness ” ) , from negative prefix in- ( “ not ” ) , + fīnis ( “ end ” ) , + noun of state suffix -tās .",
+        "origin_languages": [
+            "Middle English",
+            "Old French",
+            "Latin"
+        ],
+        "correct_answer": "B",
+        "cached_at": "2026-01-10T20:51:08.510459"
+    },
+    "gasp": {
+        "word": "gasp",
+        "text": "From Middle English gaspen , gayspen ( “ to gape, outbreathe ” ) , related to and likely derived from Old Norse geispa ( “ to yawn ” ) or its descendant Danish gispe , which may be related to gapa ( “ to gape ” ) . [ 1 ]",
+        "origin_languages": [
+            "Middle English",
+            "Old Norse",
+            "Danish"
+        ],
+        "correct_answer": "E",
+        "cached_at": "2026-01-10T20:51:10.546781"
+    },
+    "bread": {
+        "word": "bread",
+        "text": "From Middle English bred , breed , from Old English brēad ( “ fragment, bit, morsel, crumb\", also \"bread ” ) , from Proto-West Germanic *braud , from Proto-Germanic *braudą ( “ cooked food, leavened bread ” ) , from Proto-Indo-European *bʰerw- , *bʰrew- ( “ to boil, seethe ” ) (see brew ). Alternatively, from Proto-Germanic *braudaz , *brauþaz ( “ broken piece, fragment ” ) , from Proto-Indo-European *bʰera- ( “ to split, beat, hew, struggle ” ) (see brittle ). Perhaps a conflation of the two. Possibly a doublet of broa .\nCognate with Scots breid ( “ bread ” ) , North Frisian bruad , Bruar , brüüdj ( “ bread ” ) , Saterland Frisian Brood ( “ bread ” ) , West Frisian brea ( “ bread ” ) , Cimbrian proat , pròat ( “ bread ” ) , Dutch brood ( “ bread ” ) , German Brot ( “ bread ” ) , Luxembourgish Brout ( “ bread ” ) , Mòcheno proat ( “ bread ” ) , Vilamovian brūt ( “ bread; loaf ” ) , Yiddish ברויט ( broyt , “ bread ” ) , Danish , Norwegian Bokmål and Norwegian Nynorsk brød ( “ bread ” ) , Elfdalian broð ( “ bread ” ) , Faroese breyð ( “ bread ” ) , Icelandic brauð ( “ bread ” ) , Swedish bröd ( “ bread ” ) , Crimean Gothic broe ( “ bread ” ) , Albanian brydh ( “ I make crumbly, friable, soft ” ) , Latin frustum ( “ crumb ” ) . Eclipsed non-native Middle English payn ( “ bread ” ) , borrowed from Old French pain ( “ bread ” ) . In this sense, mostly replaced loaf , which had been the more common term in Old English (see hlaf ), a process which similarly occured in other languages such as German.",
+        "origin_languages": [
+            "Middle English",
+            "Old English",
+            "Proto-West Germanic",
+            "Proto-Germanic",
+            "Proto-Indo-European",
+            "Scots",
+            "North Frisian",
+            "Saterland Frisian",
+            "West Frisian",
+            "Cimbrian",
+            "Dutch",
+            "German",
+            "Luxembourgish",
+            "Mòcheno",
+            "Vilamovian",
+            "Yiddish",
+            "Danish",
+            "Norwegian Bokmål",
+            "Norwegian Nynorsk",
+            "Elfdalian",
+            "Faroese",
+            "Icelandic",
+            "Swedish",
+            "Crimean Gothic",
+            "Albanian",
+            "Latin",
+            "Old French"
+        ],
+        "correct_answer": "C",
+        "cached_at": "2026-01-10T20:51:25.136263"
+    },
+    "day": {
+        "word": "day",
+        "text": "Inherited from Middle English day , from Old English dæġ , from Proto-West Germanic *dag , from Proto-Germanic *dagaz ( “ day ” ) , from Proto-Indo-European *dʰegʷʰ- ( “ to burn ” ) .",
+        "origin_languages": [
+            "Middle English",
+            "Old English",
+            "Proto-West Germanic",
+            "Proto-Germanic",
+            "Proto-Indo-European"
+        ],
+        "correct_answer": "C",
+        "cached_at": "2026-01-10T20:51:52.440058"
+    },
+    "genre": {
+        "word": "genre",
+        "text": "Unadapted borrowing from French genre , from Old French gen(d)re , borrowed from Latin genere . Doublet of gender and genus .",
+        "origin_languages": [
+            "French",
+            "Old French",
+            "Latin"
+        ],
+        "correct_answer": "B",
+        "cached_at": "2026-01-10T20:54:15.241466"
+    },
+    "house": {
+        "word": "house",
+        "text": "From Middle English hous , hus , from Old English hūs ( “ dwelling, shelter, house ” ) , from Proto-West Germanic *hūs , from Proto-Germanic *hūsą , possibly from Proto-Indo-European *(s)kews- , from *(s)kewH- ( “ to cover, hide ” ) .\nEclipsed non-native Middle English meson , measoun ( “ house ” ) , borrowed from Anglo-Norman maisun ( “ house ” ) . More at hose . The uncommon plural form housen is from Middle English husen , housen . (The Old English nominative plural was simply hūs .)",
+        "origin_languages": [
+            "Middle English",
+            "Old English",
+            "Proto-West Germanic",
+            "Proto-Germanic",
+            "Proto-Indo-European",
+            "Anglo-Norman"
+        ],
+        "correct_answer": "C",
+        "cached_at": "2026-01-10T20:54:21.084655"
+    },
+    "millionaire": {
+        "word": "millionaire",
+        "text": "From French millionnaire . By surface analysis , million +‎ -aire .",
+        "origin_languages": [
+            "French"
+        ],
+        "correct_answer": "D",
+        "cached_at": "2026-01-10T20:56:14.731317"
+    },
+    "slaughter": {
+        "word": "slaughter",
+        "text": "From Middle English slaughter , from Old Norse *slahtr , later sláttr , from Proto-Germanic *slahtrą , from Proto-Germanic *slahaną . Equivalent to slay +‎ -ter (as in laughter ). Eventually derived from Proto-Indo-European *slak- ( “ to hit, strike, throw ” ) . Related with Dutch slachten , German schlachten , Finnish lahdata (all “to slaughter”).",
+        "origin_languages": [
+            "Middle English",
+            "Old Norse",
+            "Proto-Germanic",
+            "Proto-Indo-European",
+            "Dutch",
+            "German",
+            "Finnish"
+        ],
+        "correct_answer": "E",
+        "cached_at": "2026-01-10T21:03:22.407536"
+    },
+    "parachute": {
+        "word": "parachute",
+        "text": "Borrowed from French parachute , from para- ( “ protection against ” ) (as in parasol ) and chute ( “ fall ” ) .",
+        "origin_languages": [
+            "French"
+        ],
+        "correct_answer": "D",
+        "cached_at": "2026-01-10T21:23:21.981265"
+    },
+    "skirt": {
+        "word": "skirt",
+        "text": "From Middle English skyrte , from Old Norse skyrta , from Proto-Germanic *skurtijǭ . Doublet of shirt . Cognate with Saterland Frisian Skoarte ( “ apron ” ) , Dutch schort ( “ apron ” ) , German Schürze ( “ apron ” ) , Danish skørt ( “ skirt ” ) , Swedish skört ( “ hem of a jacket ” ) , Norwegian skjørt ( “ skirt ” ) .",
+        "origin_languages": [
+            "Middle English",
+            "Old Norse",
+            "Proto-Germanic",
+            "Saterland Frisian",
+            "Dutch",
+            "German",
+            "Danish",
+            "Swedish",
+            "Norwegian"
+        ],
+        "correct_answer": "E",
+        "cached_at": "2026-01-10T22:27:30.119868"
+    },
+    "thrust": {
+        "word": "thrust",
+        "text": "From Middle English þrusten , from Old Norse þrysta , from Proto-Germanic *þrustijaną , possibly from Proto-Indo-European *trewd- .",
+        "origin_languages": [
+            "Middle English",
+            "Old Norse",
+            "Proto-Germanic",
+            "Proto-Indo-European"
+        ],
+        "correct_answer": "E",
+        "cached_at": "2026-01-10T22:27:33.623740"
+    },
+    "child": {
+        "word": "child",
+        "text": "From Middle English child , from Old English ċild , from Proto-West Germanic *kilþ , *kelþ , from Proto-Germanic *kelþaz ( “ womb ; fetus ” ) , from Proto-Indo-European *ǵelt- ( “ womb ” ) , perhaps from Proto-Indo-European *gel- ( “ to ball up, amass ” ) .\nCognate with Danish kuld ( “ brood , litter ” ) , Swedish kull ( “ brood , litter ” ) , Icelandic kelta , kjalta ( “ lap ” ) , Gothic 𐌺𐌹𐌻𐌸𐌴𐌹 ( kilþei , “ womb ” ) , Sanskrit जर्त ( jarta ) , जर्तु ( jártu , “ vulva ” ) .",
+        "origin_languages": [
+            "Middle English",
+            "Old English",
+            "Proto-West Germanic",
+            "Proto-Germanic",
+            "Proto-Indo-European",
+            "Danish",
+            "Swedish",
+            "Icelandic",
+            "Gothic",
+            "Sanskrit"
+        ],
+        "correct_answer": "C",
+        "cached_at": "2026-01-10T22:33:18.968811"
+    },
+    "aviation": {
+        "word": "aviation",
+        "text": "Borrowed from French aviation , derived from Latin avis ( “ bird ” ) . [ 1 ] By surface analysis , avi- +‎ -ation .",
+        "origin_languages": [
+            "French",
+            "Latin"
+        ],
+        "correct_answer": "D",
+        "cached_at": "2026-01-10T22:36:20.666793"
+    },
+    "ransack": {
+        "word": "ransack",
+        "text": "The verb is derived from Middle English ransaken ( “ to examine, investigate; to rob, plunder, steal; to search, seek; to treat roughly, mistreat ” ) , [ 1 ] from Old Norse rannsaka ( “ to search a house (especially for stolen goods) ” ) , from rann ( “ house ” ) (from Proto-Germanic *razną ( “ dwelling, house ” ) , from Proto-Indo-European *h₁reh₁- ( “ lonesome; quiet; to rest ” ) ) + saka , an ablaut variant of sœkja , sǿkja ( “ to look for, search, seek ” ) (from Proto-Germanic *sōkijaną ( “ to look for, seek ” ) , ultimately from Proto-Indo-European *seh₂g- ( “ to follow; to seek out, trace ” ) ). [ 2 ]\nVerb verb sense 1.2 (“to search (someone, or a place) thoroughly in order to steal something”), verb sense 1.3 (“to search for and steal (something) as plunder”), and verb sense 2.2 (“to search for and steal things”) is probably influenced by sack ( “ to pillage, to plunder ” ) . [ 2 ]\nThe noun is derived from the verb. [ 3 ]",
+        "origin_languages": [
+            "Middle English",
+            "Old Norse",
+            "Proto-Germanic",
+            "Proto-Indo-European"
+        ],
+        "correct_answer": "E",
+        "cached_at": "2026-01-10T22:50:32.522266"
+    },
+    "cholesterol": {
+        "word": "cholesterol",
+        "text": "Borrowed from French cholestérol .",
+        "origin_languages": [
+            "French"
+        ],
+        "correct_answer": "D",
+        "cached_at": "2026-01-10T23:11:25.878140"
+    },
+    "wife": {
+        "word": "wife",
+        "text": "Inherited from Middle English wyf , wif , from Old English wīf ( “ woman, wife ” ) , from Proto-West Germanic *wīb , from Proto-Germanic *wībą ( “ woman; wife ” ) .",
+        "origin_languages": [
+            "Middle English",
+            "Old English",
+            "Proto-West Germanic",
+            "Proto-Germanic"
+        ],
+        "correct_answer": "C",
+        "cached_at": "2026-01-10T23:12:05.824292"
+    },
+    "passport": {
+        "word": "passport",
+        "text": "From French passeport , from passer ( “ pass ” ) +‎ port ( “ port ” ) . Compare portpass . Equivalent to pass +‎ port .",
+        "origin_languages": [
+            "French"
+        ],
+        "correct_answer": "D",
+        "cached_at": "2026-01-10T23:13:07.678031"
+    },
+    "microscope": {
+        "word": "microscope",
+        "text": "From New Latin microscopium and Italian microscopio , from Ancient Greek μικρός ( mikrós , “ small ” ) + σκοπέω ( skopéō , “ I look at ” ) , equivalent to micro- +‎ -scope .",
+        "origin_languages": [
+            "New Latin",
+            "Italian",
+            "Ancient Greek"
+        ],
+        "correct_answer": "A",
+        "cached_at": "2026-01-10T23:19:35.536314"
+    },
+    "foot": {
+        "word": "foot",
+        "text": "From Middle English fot , fote , foot , from Old English fōt , from Proto-West Germanic *fōt , from Proto-Germanic *fōts , from Proto-Indo-European *pṓds . Doublet of pes , pie ( “ Spanish unit of length ” ) , and pous .",
+        "origin_languages": [
+            "Middle English",
+            "Old English",
+            "Proto-West Germanic",
+            "Proto-Germanic",
+            "Proto-Indo-European"
+        ],
+        "correct_answer": "C",
+        "cached_at": "2026-01-10T23:20:09.050025"
+    },
+    "cake": {
+        "word": "cake",
+        "text": "From Middle English cake , from Old Norse kaka ( “ cake ” ) (compare Norwegian kake , Icelandic/Swedish kaka , Danish kage ), from Proto-Germanic *kakǭ , of disputed origin. Likely a distant cognate with kaak . Perhaps related to cookie , kuchen , and quiche . Doublet of coca ( pastry ) .",
+        "origin_languages": [
+            "Middle English",
+            "Old Norse",
+            "Norwegian",
+            "Proto-Germanic"
+        ],
+        "correct_answer": "E",
+        "cached_at": "2026-01-10T23:22:32.016999"
+    },
+    "synonym": {
+        "word": "synonym",
+        "text": "From Middle English sinonyme , from Latin synōnymum , from Ancient Greek συνώνυμον ( sunṓnumon ) , neuter singular form of συνώνυμος ( sunṓnumos , “ synonymous ” ) , from σύν ( sún , “ with ” ) + ὄνομα ( ónoma , “ name ” ) . By surface analysis , syn- +‎ -onym .",
+        "origin_languages": [
+            "Middle English",
+            "Latin",
+            "Ancient Greek"
+        ],
+        "correct_answer": "A",
+        "cached_at": "2026-01-10T23:24:14.005410"
+    },
+    "night": {
+        "word": "night",
+        "text": "From Middle English nighte , night , nyght , niȝt , naht , from Old English niht , from Proto-West Germanic *naht ( “ night ” ) , from Proto-Germanic *nahts ( “ night ” ) , from Proto-Indo-European *nókʷts ( “ night ” ) .",
+        "origin_languages": [
+            "Middle English",
+            "Old English",
+            "Proto-West Germanic",
+            "Proto-Germanic",
+            "Proto-Indo-European"
+        ],
+        "correct_answer": "C",
+        "cached_at": "2026-01-10T23:40:11.708315"
+    },
+    "steak": {
+        "word": "steak",
+        "text": "From Middle English steike , from Old Norse steik ( “ roast; meat roasted on a stick ” ) . The verb is either from the noun or from steikja ( “ to roast ” ) .\nThe modern pronunciation shows an irregular change of Early Modern English /ɛː/ to /eɪ/ in the standard language; contrast this with the development of other words such as speak and wreak .",
+        "origin_languages": [
+            "Middle English",
+            "Old Norse"
+        ],
+        "correct_answer": "E",
+        "cached_at": "2026-01-10T23:45:18.917868"
+    },
+    "isolation": {
+        "word": "isolation",
+        "text": "First attested in 1800. From French isolation , from isolé , placed on an island (thus away from other people). Equivalent to isolate +‎ -ion .",
+        "origin_languages": [
+            "French"
+        ],
+        "correct_answer": "D",
+        "cached_at": "2026-01-11T00:05:59.578631"
+    }
+}
