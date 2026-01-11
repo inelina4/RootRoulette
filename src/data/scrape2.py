@@ -3,6 +3,8 @@ import requests
 from bs4 import BeautifulSoup, Tag
 from dataclasses import dataclass
 from typing import List, Optional
+
+#lai definētu statusa kodus
 from enum import Enum
 
 #lai randomizētu jautājumus spēlē
@@ -10,9 +12,11 @@ import random
 
 #lai saglabātu un ielādētu punktus un vārdnīcu
 import json
+
+#lai faili atrastos pareizajā vietā
 import os
 
-#Wiktionary links un User-Agent, lai izvairītos no bloķēšanas
+#Wiktionary API adrese un User-Agent, lai izvairītos no bloķēšanas
 API_URL = "https://en.wiktionary.org/w/api.php"
 HEADERS = {
     "User-Agent": "DF_LU_Bot/0.1 (https://example.com; contact@example.com)"
@@ -21,17 +25,17 @@ HEADERS = {
 #lai JSON faili atrastos pareizajā vietā
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, "data")
-
 os.makedirs(DATA_DIR, exist_ok=True)
-
 POINTS_FILE = os.path.join(DATA_DIR, "points.json")
 WORDS_FILE = os.path.join(DATA_DIR, "word_dict.json")
 
+#lai definētu statusa kodus (funkcijas rezultātus) un atbildes struktūru
 class Status(Enum):
     SUCCESS = "S"
     ERROR = "E"
     NOT_FOUND = "N"
 
+#strukturē datus, lai būtu vieglāk piekļūt etimoloģijas informācijai
 @dataclass
 class EtymologyData:
     word: str
@@ -44,6 +48,7 @@ class EtymologyResponse:
     message: str
     data: Optional[EtymologyData] = None
 
+#funkcija, kas iegūst etimoloģijas informāciju no Wiktionary
 def get_etymology_info(word: str) -> EtymologyResponse:
     try:
         params = {
@@ -64,10 +69,11 @@ def get_etymology_info(word: str) -> EtymologyResponse:
                 data=None
             )
         
+        #parsē HTML saturu; lai varētu meklēt etimoloģijas sadaļu un tekstu
         html = response_json["parse"]["text"]["*"]
         soup = BeautifulSoup(html, "html.parser")
 
-        #Atrod angļu valodas sadaļu
+        #atrod angļu valodas sadaļu
         english = soup.find("h2", id="English")
         if not english:
             return EtymologyResponse(
@@ -97,19 +103,28 @@ def get_etymology_info(word: str) -> EtymologyResponse:
         etymology_paragraphs = []
         origin_languages = []
         
+        #pārlasa visus elementus etimoloģijas sadaļā līdz nākamajai sadaļai (nākamajam virsrakstam)
         for el in heading_container.next_siblings:
+
+            #pārtrauc, ja sasniedz nākamo virsrakstu
             if isinstance(el, Tag) and el.name in ("div", "h2", "h3", "h4"):
                 if el.find(["h2", "h3", "h4"]):
                     break
+
+            #apkopo etimoloģijas tekstu un izcelsmes valodas, meklējot rindkopas un sakārto datus
             if isinstance(el, Tag) and el.name == "p":
                 etymology_paragraphs.append(el.get_text(" ", strip=True))
+
+                #meklē izcelsmes valodas etimoloģijas tekstā
                 for span in el.select("span.etyl a"):
                     name = span.get_text(strip=True)
                     if name not in origin_languages:
                         origin_languages.append(name)
         
+        #apvieno rindkopas vienā tekstā
         etymology_text = "\n".join(etymology_paragraphs)
         
+        #ja etimoloģijas teksts ir tukšs, atgriež paziņojumu
         if not etymology_text:
             return EtymologyResponse(
                 status=Status.NOT_FOUND,
@@ -117,16 +132,6 @@ def get_etymology_info(word: str) -> EtymologyResponse:
                 data=EtymologyData(word=word, text="", origin_languages=origin_languages)
             )
         
-        return EtymologyResponse(
-            status=Status.SUCCESS,
-            message="Etymology retrieved successfully",
-            data=EtymologyData(
-                word=word,
-                text=etymology_text,
-                origin_languages=origin_languages
-            )
-        )
-    
     except requests.RequestException as e:
         return EtymologyResponse(
             status=Status.ERROR,

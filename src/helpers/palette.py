@@ -1,3 +1,5 @@
+#nolasa un pielāgo Qt paleti JSON saglabāšanai un ielādei
+
 import sys
 import json
 
@@ -5,18 +7,18 @@ from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QBrush, QColor, QPalette
 from PyQt6.QtWidgets import QApplication, QWidget, QPushButton
 
-
+#ņem QColor un pārveido to HEX formātā
 def dump_color(color: QColor) -> str:
     return f"#{color.rgba():08x}"
 
-
+#ņem QBrush un pārveido to vārdnīcā, lai saglabātu JSON formātā
 def dump_brush(brush: QBrush) -> dict:
     return {
         "color": dump_color(brush.color()),
         "style": brush.style().name,
     }
 
-
+#ņem QPalette un pārveido to vārdnīcā, lai saglabātu JSON formātā
 def dump_palette(palette: QPalette) -> dict:
     return {
         color_group.name: {
@@ -33,7 +35,7 @@ def dump_palette(palette: QPalette) -> dict:
         ]
     }
 
-
+#ņem vārdnīcu un pārveido to atpakaļ par QPalette
 def apply_palette(palette: QPalette, d: dict):
     for color_group in [
         QPalette.ColorGroup.Active,
@@ -49,27 +51,26 @@ def apply_palette(palette: QPalette, d: dict):
                 palette.setBrush(color_group, color_role, brush)
                 palette.setColor(color_group, color_role, color)
 
-
+#uzstāda QWidget fona krāsu, izmantojot QPalette, neietekmējot fontu vai citas lietas
 def set_widget_background(widget: QWidget, color: str):
-    """Set the background color of a QWidget using QPalette without affecting font or other styles."""
+    """Uzstāda QWidget fona krāsu, izmantojot QPalette, neietekmējot fontu vai ko citu."""
     palette = widget.palette()
     palette.setColor(QPalette.ColorRole.Window, QColor(color))
     widget.setAutoFillBackground(True)
     widget.setPalette(palette)
 
-
+#uzstāda QPushButton fona krāsu, izmantojot QPalette, neizmantojot stilu lapas
 def set_button_background(button: QPushButton, color: str):
-    """Set the background color of a QPushButton using QPalette without stylesheets."""
+    """Uzstāda QPushButton fona krāsu, izmantojot QPalette bez stilu lapām."""
     palette = button.palette()
     palette.setColor(QPalette.ColorRole.Button, QColor(color))
     button.setAutoFillBackground(True)
     button.setPalette(palette)
     button.update()
 
-
+#izveido aplikāciju, pārveido tās paleti uz vārdnīcu un atpakaļ, lai pārbaudītu funkcijas
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-
     palette = app.style().standardPalette()
     d = dump_palette(palette)
     print(json.dumps(d, indent=4))
