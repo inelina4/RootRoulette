@@ -4,10 +4,10 @@ import pathlib
 from PyQt6 import uic
 from PyQt6.QtCore import QSettings
 from PyQt6.QtWidgets import QMainWindow, QDialog, QApplication, QStackedWidget
-
 from src.helpers.palette import dump_palette
 
 logger = logging.getLogger(__name__)
+
 from src.widgets.start_widget.start_widget import StartWidget
 from src.widgets.game_widget.game_widget import GameWidget
 from src.widgets.end_widget.end_widget import EndWidget

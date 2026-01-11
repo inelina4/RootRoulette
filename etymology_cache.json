@@ -574,5 +574,109 @@
         ],
         "correct_answer": "D",
         "cached_at": "2026-01-11T00:05:59.578631"
+    },
+    "frequency": {
+        "word": "frequency",
+        "text": "From Latin frequentia , from frequens . By surface analysis , frequent +‎ -cy .",
+        "origin_languages": [
+            "Latin"
+        ],
+        "correct_answer": "B",
+        "cached_at": "2026-01-11T19:36:30.362003"
+    },
+    "imitation": {
+        "word": "imitation",
+        "text": "From Middle English imitacioun , from Middle French imitacion , from Old French imitacion , from Latin imitatio .",
+        "origin_languages": [
+            "Middle English",
+            "Middle French",
+            "Old French",
+            "Latin"
+        ],
+        "correct_answer": "B",
+        "cached_at": "2026-01-11T19:36:31.334399"
+    },
+    "cinema": {
+        "word": "cinema",
+        "text": "Borrowed from French cinéma , clipping of cinématographe (term coined by the Lumière brothers in the 1890s), from Ancient Greek κίνημα ( kínēma , “ movement ” ) + γράφω ( gráphō , “ write, record ” ) . Compare German Kino ( “ cinema ” ) , ultimately from the same Greek source.",
+        "origin_languages": [
+            "French",
+            "Ancient Greek",
+            "German"
+        ],
+        "correct_answer": "D",
+        "cached_at": "2026-01-11T19:36:32.647803"
+    },
+    "window": {
+        "word": "window",
+        "text": "From Middle English wyndowe , wyndown , from Old Norse vindauga ( “ window ” , literally “ wind-eye; wind-hole ” ) , equivalent to wind +‎ eye . Cognate with Scots windae and windock , Faroese vindeyga , Norwegian Bokmål vindu , Norwegian Nynorsk vindauge , Danish vindue , archaic Swedish vindöga , Elfdalian windog . Displaced native Old English ēagþȳrel ( literally “ eye hole ” ) (the rare direct descendant is eyethurl ( “ window, pupil, etc. ” ) ). The “windows” among early Germanic peoples were just unglazed holes (eyes) in the wall or roof that permitted wind to pass through ( Can this ( + ) etymology be sourced ?) .",
+        "origin_languages": [
+            "Middle English",
+            "Old Norse",
+            "Scots",
+            "Faroese",
+            "Norwegian Bokmål",
+            "Norwegian Nynorsk",
+            "Danish",
+            "Swedish",
+            "Elfdalian",
+            "Old English"
+        ],
+        "correct_answer": "E",
+        "cached_at": "2026-01-11T19:36:53.402601"
+    },
+    "rectangle": {
+        "word": "rectangle",
+        "text": "Borrowed from Middle French , from Old French , from Medieval Latin or Late Latin rectangulum ( “ right angle ” ) , from Latin rectus ( “ right ” ) + angulus ( “ an angle ” ) .",
+        "origin_languages": [
+            "Middle French",
+            "Old French",
+            "Medieval Latin",
+            "Late Latin",
+            "Latin"
+        ],
+        "correct_answer": "B",
+        "cached_at": "2026-01-11T19:36:54.425139"
+    },
+    "rhythm": {
+        "word": "rhythm",
+        "text": "First coined in 1557, from Latin rhythmus , from Ancient Greek ῥυθμός ( rhuthmós , “ any measured flow or movement, symmetry , rhythm ” ) , from ῥέω ( rhéō , “ I flow, run, stream, gush ” ) .",
+        "origin_languages": [
+            "Latin",
+            "Ancient Greek"
+        ],
+        "correct_answer": "A",
+        "cached_at": "2026-01-11T19:36:55.413187"
+    },
+    "utopia": {
+        "word": "utopia",
+        "text": "From New Latin Ūtopia , the name of a fictional island possessing a seemingly perfect socio-politico-legal system in the book Utopia (1516) by Sir Thomas More . Coined from Ancient Greek οὐ ( ou , “ not ” ) + τόπος ( tópos , “ place, region ” ) + -ία ( -ía ) . [ 1 ] Compare English topos and -ia .",
+        "origin_languages": [
+            "New Latin",
+            "Ancient Greek",
+            "English"
+        ],
+        "correct_answer": "A",
+        "cached_at": "2026-01-11T19:36:56.532478"
+    },
+    "portfolio": {
+        "word": "portfolio",
+        "text": "From Italian portafoglio ; cognate with French portefeuille ( “ folder, wallet ” ) , from Latin portāre ( “ to carry ” ) and folium ( “ sheet ” ) . The meaning \"collection of responsibilities\" came by extension in the 1930s.",
+        "origin_languages": [
+            "Italian",
+            "French",
+            "Latin"
+        ],
+        "correct_answer": "B",
+        "cached_at": "2026-01-11T20:06:55.210455"
+    },
+    "reservoir": {
+        "word": "reservoir",
+        "text": "From French réservoir ( “ collection place ” ) (fig.), réservoir ( “ storehouse ” ) (lit.). in turn from French réserver ( “ to reserve, keep ” ) . [ 1 ]",
+        "origin_languages": [
+            "French"
+        ],
+        "correct_answer": "D",
+        "cached_at": "2026-01-11T20:09:05.142488"
     }
 }
