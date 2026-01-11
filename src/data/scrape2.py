@@ -12,12 +12,13 @@ import random
 import json
 import os
 
+#Wiktionary links un User-Agent, lai izvairītos no bloķēšanas
 API_URL = "https://en.wiktionary.org/w/api.php"
 HEADERS = {
     "User-Agent": "DF_LU_Bot/0.1 (https://example.com; contact@example.com)"
 }
 
-#lai JSON ...
+#lai JSON faili atrastos pareizajā vietā
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 
