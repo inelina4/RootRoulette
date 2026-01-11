@@ -1,3 +1,7 @@
+#savāc vārdus un pareizās atbildes (valodas A, B, C, D, E)
+#pārbauda kešatmiņu un iegūst etimoloģiju no API, ja nepieciešams, saglabā datus kešatmiņā
+#randomizē valodu opcijas un nodrošina ērtu piekļuvi vārdu sarakstam un kešatmiņas informācijai
+
 import json
 import os
 import random
