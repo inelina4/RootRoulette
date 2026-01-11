@@ -165,31 +165,31 @@ if __name__ == "__main__":
     with open(WORDS_FILE, "r", encoding="utf-8") as f:
         word_dict = json.load(f)
 
-#spēles cikls un jautājumi
-new_game = input("Do you want to start a new game? Y/N   ").upper()
-if new_game == "Y":
-    points_data["points"] = 0
-    save_points()
-question_count = int(input("How many questions do you want to ask? The maximum is 64 questions.   "))
-if question_count > 0 and question_count <= 64:
-    for i in range(int(question_count)):
-        word = random.choice(list(word_dict.keys()))
-        correct_answer = word_dict[word]
-        answer = input(f"\nQuestion {i+1}\nGuess the etymology of this word:  {word}\nOptions: \n   A) Greek\n   B) Latin\n   C) Old English\n   D) French\n   E) Norse \nYour answer:   ").upper()
-        result = get_etymology_info(word)
-        if answer == correct_answer:
-            print(f"Correct! The answer is {correct_answer}.\n")
-            print(f"Etymology of '{word}':\n{result.data.text}\nOrigin languages: {', '.join(result.data.origin_languages)}\n")
-            points_data["points"] += 1
-            save_points()
-            print(f"Your total points: {points_data['points']}\n")
-        else:
-            print(f"Wrong! The correct answer is {correct_answer}.\n")
-            print(f"Etymology of '{word}':\n{result.data.text}\nOrigin languages: {', '.join(result.data.origin_languages)}\n")
-            print(f"Your total points: {points_data['points']}\n")
-elif question_count == 0:
-    print("No questions asked.")
-elif question_count == 65:
-    print("You can ask a maximum of 64 questions.")
-else:
-    print("Invalid number of questions.")
+    #spēles cikls un jautājumi
+    new_game = input("Do you want to start a new game? Y/N   ").upper()
+    if new_game == "Y":
+        points_data["points"] = 0
+        save_points()
+    question_count = int(input("How many questions do you want to ask? The maximum is 64 questions.   "))
+    if question_count > 0 and question_count <= 64:
+        for i in range(int(question_count)):
+            word = random.choice(list(word_dict.keys()))
+            correct_answer = word_dict[word]
+            answer = input(f"\nQuestion {i+1}\nGuess the etymology of this word:  {word}\nOptions: \n   A) Greek\n   B) Latin\n   C) Old English\n   D) French\n   E) Norse \nYour answer:   ").upper()
+            result = get_etymology_info(word)
+            if answer == correct_answer:
+                print(f"Correct! The answer is {correct_answer}.\n")
+                print(f"Etymology of '{word}':\n{result.data.text}\nOrigin languages: {', '.join(result.data.origin_languages)}\n")
+                points_data["points"] += 1
+                save_points()
+                print(f"Your total points: {points_data['points']}\n")
+            else:
+                print(f"Wrong! The correct answer is {correct_answer}.\n")
+                print(f"Etymology of '{word}':\n{result.data.text}\nOrigin languages: {', '.join(result.data.origin_languages)}\n")
+                print(f"Your total points: {points_data['points']}\n")
+    elif question_count == 0:
+        print("No questions asked.")
+    elif question_count == 65:
+        print("You can ask a maximum of 64 questions.")
+    else:
+        print("Invalid number of questions.")

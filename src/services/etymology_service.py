@@ -31,7 +31,7 @@ class EtymologyService:
         'Arabic', 'Hebrew', 'Celtic', 'Slavic'
     ]
     
-    def __init__(self, word_dict_file: str = "word_dict.json", cache_file: str = "etymology_cache.json"):
+    def __init__(self, word_dict_file: str = "src/data/data/word_dict.json", cache_file: str = "etymology_cache.json"):
         self.word_dict_file = word_dict_file
         self.cache = EtymologyCache(cache_file)
         self.word_dict = self._load_word_dict()
