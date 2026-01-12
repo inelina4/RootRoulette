@@ -678,5 +678,70 @@
         ],
         "correct_answer": "D",
         "cached_at": "2026-01-11T20:09:05.142488"
+    },
+    "skill": {
+        "word": "skill",
+        "text": "From Middle English skill , skille (also schil , schile ), from Old Norse skil ( “ a distinction, discernment, knowledge ” ) , from Proto-Germanic *skilją ( “ separation, limit ” ) , from Proto-Indo-European *(s)kelH- ( “ to split, cut ” ) . Cognate with Danish skel ( “ a separation, boundary, divide ” ) , Swedish skäl ( “ reason ” ) , Dutch verschil ( “ difference ” ) and schillen ( “ to separate the outer layer ( schil ) from the product ” , verb ) .",
+        "origin_languages": [
+            "Middle English",
+            "Old Norse",
+            "Proto-Germanic",
+            "Proto-Indo-European",
+            "Danish",
+            "Swedish",
+            "Dutch"
+        ],
+        "correct_answer": "E",
+        "cached_at": "2026-01-11T20:45:35.450565"
+    },
+    "heir": {
+        "word": "heir",
+        "text": "From Middle English heir , from Anglo-Norman eir , heir , from Latin hērēs .",
+        "origin_languages": [
+            "Middle English",
+            "Anglo-Norman",
+            "Latin"
+        ],
+        "correct_answer": "B",
+        "cached_at": "2026-01-11T20:46:55.719882"
+    },
+    "tree": {
+        "word": "tree",
+        "text": "From Middle English tre , tree , treo , treou , trew , trow , from Old English trēo , trēow ( “ tree, wood, timber, beam, log, stake, stick, grove, cross, rood ” ) , from Proto-West Germanic *treu , from Proto-Germanic *trewą ( “ tree, wood ” ) , from pre-Germanic *dréwom , thematic e-grade derivative of Proto-Indo-European *dóru ( “ tree ” ) . Replaced alternative Middle English beem , from Old English bēam (see beam ) and eclipsed non-native Middle English arbre , borrowed from Old French arbre .",
+        "origin_languages": [
+            "Middle English",
+            "Old English",
+            "Proto-West Germanic",
+            "Proto-Germanic",
+            "Proto-Indo-European",
+            "Old French"
+        ],
+        "correct_answer": "C",
+        "cached_at": "2026-01-11T20:47:18.414915"
+    },
+    "deity": {
+        "word": "deity",
+        "text": "From Middle French deité , from Latin deitās .",
+        "origin_languages": [
+            "Middle French",
+            "Latin"
+        ],
+        "correct_answer": "B",
+        "cached_at": "2026-01-11T20:47:19.170393"
+    },
+    "blunder": {
+        "word": "blunder",
+        "text": "Inherited from Middle English blundren , blondren ( verb ) and blunder , blonder ( “ disturbance, strife ” ) , from the verb; partly from Middle English blondren , a frequentative form of Middle English blonden , blanden ( \"to mix; mix up\"; corresponding to blend +‎ -er ) ; and partly from Middle English blundren , a frequentative form of Middle English blunden ( “ to stagger; stumble ” ) , from Old Norse blunda ( “ to shut the eyes; doze ” ) . Cognates include Norwegian blunda ( “ to shut the eyes; doze ” ) , dialectal Swedish blundra ( “ to act blindly or rashly ” ) , Danish blunde ( “ to blink ” ) or blunde ( “ to take a nap ” ) , Icelandic blunda ( “ to nap; doze ” ) . Related to English blind .",
+        "origin_languages": [
+            "Middle English",
+            "Old Norse",
+            "Norwegian",
+            "Swedish",
+            "Danish",
+            "Icelandic",
+            "English"
+        ],
+        "correct_answer": "E",
+        "cached_at": "2026-01-11T20:47:40.781613"
     }
 }

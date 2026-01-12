@@ -93,7 +93,7 @@ class StartWidget(QGroupBox):
         placeholder_item = self.choose_drop.model().item(placeholder_index)
         placeholder_item.setEnabled(False)
 
-        self.choose_drop.addItems(["2","10", "15", "20"])
+        self.choose_drop.addItems(["5","10", "15", "20"])
 
         self.choose_drop.setCurrentIndex(0)
 
