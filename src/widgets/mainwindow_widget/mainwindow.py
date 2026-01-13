@@ -49,13 +49,11 @@ class MainWindow(QMainWindow):
         pass
     
     def setup_navigation(self):
-        """Set up the navigation system with signal connections."""
         self.start_widget = None
         self.game_widget = None
         self.end_widget = None
     
     def show_start_widget(self):
-        """Display the start widget."""
         logger.info("Showing start widget")
         last_result = self.get_last_result()
         self.start_widget = StartWidget(last_result=last_result)
@@ -66,7 +64,6 @@ class MainWindow(QMainWindow):
         self.stacked_widget.setCurrentWidget(self.start_widget)
     
     def show_game_widget(self, rounds):
-        """Display the game widget with specified rounds."""
         logger.info("Showing game widget with %s rounds", rounds)
         
         self.game_widget = GameWidget(rounds)
@@ -77,9 +74,7 @@ class MainWindow(QMainWindow):
         self.stacked_widget.setCurrentWidget(self.game_widget)
     
     def show_end_widget(self, score, max_score, correct_words: list, incorrect_words: list):
-        """Display the end widget with final score."""
         logger.info("Showing end widget with score %s/%s", score, max_score)
-        # save last result to QSettings
         self.settings.setValue("last_result", json.dumps({"score": score, "max_score": max_score}))
         self.end_widget = EndWidget(score, max_score, correct_words, incorrect_words)
         self.end_widget.restart_game_signal.connect(self.show_start_widget)
@@ -99,7 +94,6 @@ class MainWindow(QMainWindow):
         return None
 
     def clear_stacked_widget(self):
-        """Clear all widgets from the stacked widget."""
         while self.stacked_widget.count():
             widget = self.stacked_widget.widget(0)
             self.stacked_widget.removeWidget(widget)

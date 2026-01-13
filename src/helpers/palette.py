@@ -53,7 +53,6 @@ def apply_palette(palette: QPalette, d: dict):
 
 #uzstāda QWidget fona krāsu, izmantojot QPalette, neietekmējot fontu vai citas lietas
 def set_widget_background(widget: QWidget, color: str):
-    """Uzstāda QWidget fona krāsu, izmantojot QPalette, neietekmējot fontu vai ko citu."""
     palette = widget.palette()
     palette.setColor(QPalette.ColorRole.Window, QColor(color))
     widget.setAutoFillBackground(True)

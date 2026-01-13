@@ -24,7 +24,6 @@ class StartWidget(QGroupBox):
 
         self.setWindowTitle("RootRoulette")
 
-
         logger.info("Startwidget UI loaded from %s", ui_path)
         self.selected_rounds = None
         self.greeting_label = QLabel(self)
@@ -44,15 +43,11 @@ class StartWidget(QGroupBox):
 
     def set_greeting(self, last_result):
         try:
-            # Load greetings from JSON file  
             base_dir = pathlib.Path(__file__).resolve().parent.parent.parent.parent
             greetings_path = base_dir / "greetings.json"
-            
             with open(greetings_path, 'r', encoding='utf-8') as f:
                 greetings = json.load(f)
-            
             if not last_result:
-                # First time player
                 greeting = random.choice(greetings["first_time"])
                 self.greeting_label.setText(greeting)
                 return
@@ -105,7 +100,6 @@ class StartWidget(QGroupBox):
 
 
     def emit_exit_signal(self):
-        """Emit signal to main window to close the app."""
         self.exit_game_signal.emit()
 
     def show_instructions(self):

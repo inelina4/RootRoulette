@@ -42,12 +42,10 @@ class EndWidget(QGroupBox):
             self.check_button.clicked.connect(self.show_summary)
 
     def restart_game(self):
-        """Emit signal to restart the game."""
         logger.info("Restarting game")
         self.restart_game_signal.emit()
 
     def emit_exit_signal(self):
-        """Emit signal to main window to close the app."""
         self.exit_game_signal.emit()
 
     def show_summary(self):
